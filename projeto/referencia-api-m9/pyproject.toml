@@ -1,0 +1,45 @@
+[project]
+name = "lab"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "argon2-cffi>=25.1.0",
+    "bcrypt>=5.0.0",
+    "celery>=5.7.0",
+    "channels>=4.3.2",
+    "channels-redis>=4.3.0",
+    "django>=5.2,<5.3",
+    "django-cors-headers>=4.9,<4.10",
+    "django-filter>=26.2",
+    "djangorestframework>=3.18,<3.19",
+    "djangorestframework-simplejwt>=5.5,<5.6",
+    "drf-spectacular>=0.30,<0.31",
+    "graphql-core>=3.3.2",
+    "grpcio>=1.85.1",
+    "grpcio-tools>=1.85.1",
+    "gunicorn>=26.2.0",
+    "httpx>=0.28.1",
+    "pika>=1.4.4",
+    "pillow>=13.0.0",
+    "psycopg[binary]>=3.3.8",
+    "pytest>=9.2.0",
+    "pytest-django>=4.14.0",
+    "redis>=8.1.0",
+    "uvicorn>=0.54.0",
+    "websockets>=17.4",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "daphne>=4.2.3",
+    "detect-secrets>=1.5.0",
+    "import-linter>=2.16",
+    "mypy>=2.4.1",
+    "pip-audit>=2.10.1",
+    "pytest-asyncio>=1.4.1.post1",
+    "pytest-cov>=7.1.0",
+    "pytest-env>=1.8.5",
+    "radon>=6.0.1",
+    "ruff>=0.17.4",
+]

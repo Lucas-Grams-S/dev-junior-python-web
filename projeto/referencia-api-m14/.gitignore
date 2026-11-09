@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.sqlite3
+*.log
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.grimp_cache/
+.import_linter_cache/
+outbox.jsonl
+node_modules/
+staticfiles/
+nginx/certs/
+media/

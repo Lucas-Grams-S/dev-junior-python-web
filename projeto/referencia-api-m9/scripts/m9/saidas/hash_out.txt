@@ -1,0 +1,13 @@
+algoritmo                                                        tempo por hash    tentativas/s (1 núcleo)
+SHA-256 puro (ERRADO para senhas)                                        0.3 µs                  3,448,042
+SHA-256 com salt (ainda ERRADO)                                          0.3 µs                  3,164,463
+PBKDF2-SHA256, 1,000,000 iterações (padrão Django 5.2)               110.045 ms                          9
+bcrypt, custo 12                                                     198.814 ms                          5
+scrypt (n=2^15, r=8, p=1)                                             56.060 ms                         18
+Argon2id (padrões do argon2-cffi)                                     55.569 ms                         18
+
+Formato guardado no banco (mesma senha, duas vezes → hashes diferentes por causa do SALT):
+   pbkdf2_sha256$1000000$8ZBwWvG6DwnfT9EXrgKRhC$uZvI4PRKHU2zelP...
+   pbkdf2_sha256$1000000$iB492ZD8xDSTyx9oKqcaiA$NB4ex01+tfln/bp...
+   mesma senha, mesmo hash? False · check_password(certa) = True · check_password(errada) = False
+   Argon2id: $argon2id$v=19$m=65536,t=3,p=4$1PLOGUk60A3kjEXT8M/XbQ$LM6dHVMB2XC+WsRRN7JV6NOLiubiDCIHdSilL8cn+u0

@@ -1,0 +1,20 @@
+== requisição normal (HSTS/HTTPS atrás de proxy):
+categories -> 200
+== requisição lenta em andamento + SIGTERM após 1 s:
+terminei o trabalho
+resposta da lenta: 200 em 3.000859s
+processo encerrou depois de 2.3s do SIGTERM
+== curl após encerrar:
+000
+conexão recusada (já saiu)
+== o que o gunicorn escreveu em stdout:
+[287167] [INFO] Starting gunicorn 26.2.0
+[287167] [INFO] Listening at: http://127.0.0.1:8161 (287167)
+[287167] [INFO] Using worker: sync
+[287168] [INFO] Booting worker with pid: 287168
+[287167] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+127.0.0.1 - - [08/Nov/2026:19:09:18 +0000] "GET /api/v1/categories/ HTTP/1.1" 200 52 "-" "curl/8.18.0"
+[287167] [INFO] Handling signal: term
+127.0.0.1 - - [08/Nov/2026:19:09:21 +0000] "GET /lenta HTTP/1.1" 200 20 "-" "curl/8.18.0"
+[287168] [INFO] Worker exiting (pid: 287168)
+[287167] [INFO] Shutting down: Master

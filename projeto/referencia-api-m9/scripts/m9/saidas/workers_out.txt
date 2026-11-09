@@ -1,0 +1,5 @@
+limite configurado: login = 5/min; 14 tentativas seguidas contra 2 workers
+cache_local_por_processo: 401 401 401 401 401 401 429 401 401 429 429 401 401 429
+   passaram (401): 10 · bloqueadas (429): 4
+cache_compartilhado_redis: 401 401 401 401 401 429 429 429 429 429 429 429 429 429
+   passaram (401): 5 · bloqueadas (429): 9

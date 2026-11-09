@@ -1,0 +1,2 @@
+../m8/isp.py:37: error: Argument 1 to "relatorio_de_estoque" has incompatible type "SemOMetodo"; expected "LeitorDeProdutos"  [arg-type]
+Found 1 error in 1 file (checked 1 source file)

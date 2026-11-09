@@ -1,0 +1,9 @@
+Seed ok: 64 produtos
+seed completo: 247 ms
+3    0.000    0.000    0.161    0.054 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/pyt
+3    0.000    0.000    0.161    0.054 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/pyt
+3    0.000    0.000    0.161    0.054 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/pyt
+3    0.000    0.000    0.158    0.053 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/pyt
+3    0.157    0.052    0.157    0.052 {built-in method _argon2_cffi_bindings._ffi.argon2_hash}
+70    0.001    0.000    0.060    0.001 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/py
+6    0.000    0.000    0.003    0.001 /tmp/claude-1000/-home-lucas-docs-dev-junior/2ff48105-b6fe-4487-bd2d-98f127918b70/scratchpad/lab10/.venv/lib/pyt

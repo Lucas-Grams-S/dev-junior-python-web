@@ -1,0 +1,7 @@
+.env
+*.sqlite3
+*.log
+__pycache__/
+.venv/
+outbox.jsonl
+scripts/m9/tls/

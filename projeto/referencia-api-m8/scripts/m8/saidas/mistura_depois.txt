@@ -1,0 +1,15 @@
+legado.processar_pedido                mistura 2 camada(s) | ramos/decisões: 16
+    · dados (banco)      cursor, execute, fetchone, get
+    · infraestrutura     print
+orders.services.create_order           mistura 1 camada(s) | ramos/decisões:  5
+    · infraestrutura     logger
+payments.services.processar_evento     mistura 3 camada(s) | ramos/decisões:  9
+    · interface (HTTP)   status
+    · dados (banco)      create, filter, get, objects, save, select_for_update
+    · infraestrutura     logger
+orders.api.OrderViewSet.create         mistura 2 camada(s) | ramos/decisões:  2
+    · interface (HTTP)   Response, ValidationError, request
+    · dados (banco)      get
+orders.api.OrderViewSet.get_queryset   mistura 2 camada(s) | ramos/decisões:  1
+    · interface (HTTP)   request
+    · dados (banco)      objects

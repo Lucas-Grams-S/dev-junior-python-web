@@ -1,0 +1,27 @@
+Item  Resultado   Verificação → evidência
+A01   OK          Anônimo lista pedidos? → GET /orders/ sem token → 401
+A01   OK          Outro usuário lê o pedido de 'cliente' (IDOR)? → GET /orders/1/ como estoquista → 404
+A01   OK          Outro usuário cancela o pedido? → POST /orders/1/cancel/ → 404
+A01   OK          Cliente comum cria produto? → POST /products/ como cliente → 403
+A02   OK          Cabeçalhos de segurança presentes? → ausentes: 
+A02   OK          /demo/sync/ exposto em produção? → GET /demo/sync/ → 404
+A02   ATENÇÃO     /admin/login/ exposto em produção? → GET /admin/login/ → 200
+A02   OK          /api/docs/ exposto em produção? → GET /api/docs/ → 404
+A02   OK          DEBUG desligado? → DEBUG=False
+A03   NÃO MEDIDO  Dependências auditadas (pip-audit)? → veja a aula 9.06
+A04   OK          Algoritmo de hash de senhas → Argon2PasswordHasher (primeiro da lista PASSWORD_HASHERS; os demais só verificam senhas antigas)
+A04   ATENÇÃO     JWT assinado com → HS256 usando a SECRET_KEY da aplicação (a mesma chave assina sessões)
+A05   ATENÇÃO     SQL cru, mark_safe ou csrf_exempt no código? → 2 ocorrência(s): apps/payments/api.py:4:from django.views.decorators.csrf import csrf_exempt | apps/payments/api.py:16:@csrf_exempt                                                  # nã
+A05   OK          Busca resiste a ' OR 1=1 --? → GET /products/?search=' OR 1=1 -- → 200, 0 resultados
+A06   OK          Quantidade negativa no carrinho? → POST quantity=-5 → 400
+A06   OK          Auto-promoção a gerente (mass assignment)? → PATCH /auth/me/ role=manager → 405
+A07   OK          Erro de login revela se o usuário existe? → usuário inexistente → 401; senha errada → 401; corpos iguais: True
+A07   OK          Tentativas de login são limitadas? → 7 tentativas seguidas → [401, 401, 401, 401, 401, 429, 429]
+A07   OK          Há validadores de senha? → AUTH_PASSWORD_VALIDATORS = [{'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'}, {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', 'OPTIONS': {'min_length': 12}}, {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'}, {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}]
+A08   OK          Webhook exige assinatura? → HMAC + timestamp (aula 7.09); sem assinatura → 401
+A08   OK          Celery aceita só JSON (sem pickle)? → CELERY_ACCEPT_CONTENT = ['json']
+A09   OK          Login falho registra QUEM tentou (usuário/IP)? → mensagens geradas: ['login_failed username=cliente ip=127.0.0.1', 'Unauthorized: /api/v1/auth/token/']
+A10   OK          JSON quebrado vira erro limpo (sem stack trace)? → POST /cart/items/ com corpo inválido → 400 {"detail":"JSON parse error - Expecting property name enclosed in double quotes: line 1 column 2 (char 1)","code":"parse
+A10   ATENÇÃO     Com DEBUG=1 a página 404 vaza o mapa de rotas? → (status, mostra rotas) = 404 True  ← por isso DEBUG=0 em produção
+
+resumo: {"OK": 19, "ATENÇÃO": 4, "NÃO MEDIDO": 1}

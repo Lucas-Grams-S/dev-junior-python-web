@@ -1,0 +1,16 @@
+GET /api/v1/categories/ → 200
+   Strict-Transport-Security: max-age=3600
+   Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
+   X-Content-Type-Options: nosniff
+   X-Frame-Options: DENY
+   Referrer-Policy: same-origin
+   Cross-Origin-Opener-Policy: same-origin
+   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+GET /admin/login/ → 200
+   Strict-Transport-Security: max-age=3600
+   Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+   X-Content-Type-Options: nosniff
+   X-Frame-Options: DENY
+   Referrer-Policy: same-origin
+   Cross-Origin-Opener-Policy: same-origin
+   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()

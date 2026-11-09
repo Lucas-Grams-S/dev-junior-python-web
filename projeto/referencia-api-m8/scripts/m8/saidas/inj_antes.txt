@@ -1,0 +1,8 @@
+E       assert (True is False)
+E       assert (True is False)
+E           sqlite3.OperationalError: near "Brien": syntax error
+E           django.db.utils.OperationalError: near "Brien": syntax error
+FAILED tests/test_legado_seguranca.py::test_sku_estranho_e_tratado_como_texto[' or '1'='1]
+FAILED tests/test_legado_seguranca.py::test_sku_estranho_e_tratado_como_texto[A-100' or '1'='1]
+FAILED tests/test_legado_seguranca.py::test_sku_estranho_e_tratado_como_texto[O'Brien]
+3 failed in 0.61s

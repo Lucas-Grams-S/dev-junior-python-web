@@ -1,0 +1,7 @@
+E       Failed: DID NOT RAISE Exception
+E       Failed: DID NOT RAISE Exception
+E       Failed: DID NOT RAISE Exception
+FAILED ../m10/teste_da_sugestao_ia.py::test_cupom_inexistente_deve_ser_recusado
+FAILED ../m10/teste_da_sugestao_ia.py::test_erro_de_infraestrutura_nao_pode_virar_desconto_zero
+FAILED ../m10/teste_da_sugestao_ia.py::test_aspas_no_codigo_do_cupom_nao_quebra_a_consulta
+3 failed, 2 passed in 0.02s

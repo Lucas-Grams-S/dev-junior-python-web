@@ -1,0 +1,8 @@
+== frete_simples
+ LOC: 9  LLOC: 6  SLOC: 5  Comments: 0 
+Average complexity: A (2.0)
+../m8/frete_simples.py - A (78.02)
+== frete_enterprise
+ LOC: 47  LLOC: 34  SLOC: 32  Comments: 0 
+Average complexity: A (1.7142857142857142)
+../m8/frete_enterprise.py - A (54.96)

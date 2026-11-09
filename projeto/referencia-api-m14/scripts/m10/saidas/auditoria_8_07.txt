@@ -1,0 +1,4 @@
+mutação 's/total \* 0.10/total * 0.11/     ' → 1 failed in 0.42s
+mutação 's/frete = 19.9/frete = 20.9/      ' → 1 failed in 0.42s
+mutação 's/if total - desc < 200/if total - desc <= 200/' → 1 failed in 0.43s
+mutação 's/desc = desc - 2.5/desc = desc - 2.0/' → 1 failed in 0.44s

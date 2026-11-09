@@ -1,0 +1,6 @@
+sugestao_ia.py:1:89: E501 Line too long (155 > 88)
+sugestao_ia.py:5:89: E501 Line too long (91 > 88)
+sugestao_ia.py:8:33: S608 Possible SQL injection vector through string-based query construction
+sugestao_ia.py:8:89: E501 Line too long (101 > 88)
+sugestao_ia.py:11:5: E722 Do not use bare `except`
+Found 5 errors.

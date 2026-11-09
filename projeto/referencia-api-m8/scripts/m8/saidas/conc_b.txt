@@ -1,0 +1,3 @@
+1 passed in 1.89s 
+E           django.db.utils.IntegrityError: new row for relation "catalog_product" violates check constraint "catalog_product_stock_check" 1 failed in 1.98s 
+E           django.db.utils.IntegrityError: new row for relation "catalog_product" violates check constraint "catalog_product_stock_check" 1 failed in 1.99s 

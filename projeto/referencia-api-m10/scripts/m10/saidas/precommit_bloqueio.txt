@@ -1,0 +1,10 @@
+ruff (lint)..............................................................Failed
+- hook id: ruff-lint
+- files were modified by this hook      (removeu imports não usados e reordenou: "Found 4 errors (4 fixed)")
+ruff (formatação)........................................................Failed
+- files were modified by this hook      (ajustou espaços e quebras de linha)
+mypy (tipos).............................................................Failed
+apps/orders/ruim.py:7: error: Incompatible return value type (got "Decimal", expected "int")  [return-value]
+detect-secrets (segredos)................................................Failed
+Secret Type: AWS Access Key
+Location:    apps/orders/ruim.py:3

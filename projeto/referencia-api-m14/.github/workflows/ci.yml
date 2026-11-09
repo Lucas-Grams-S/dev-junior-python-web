@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Princípio do menor privilégio: o token do workflow só LÊ o repositório.
+permissions:
+  contents: read
+
+# Um novo push no mesmo PR cancela a execução anterior (economiza minutos e fila).
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DEBUG: "1"                  # configurações de desenvolvimento/teste (o `seed` e as rotas de demo dependem disso)
+  UV_FROZEN: "1"              # nunca resolver dependências no CI: usar exatamente o uv.lock
+
+jobs:
+  lint:
+    name: Lint, tipos e arquitetura
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with:
+          python-version: "3.13"
+          enable-cache: true
+      - run: uv sync
+      - run: uv run ruff format --check
+      - run: uv run ruff check
+      - run: uv run mypy
+      - run: uv run lint-imports
+      - run: uv run python manage.py makemigrations --check --dry-run
+      - run: uv run python manage.py spectacular --validate --fail-on-warn --file /tmp/schema.yml
+      - name: Dependências sem vulnerabilidade conhecida
+        run: |
+          uv export --no-hashes --no-emit-project -o /tmp/requirements.txt
+          uv run pip-audit -r /tmp/requirements.txt --no-deps --disable-pip
+
+  test:
+    name: Testes (${{ matrix.db }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - db: sqlite
+            database_url: sqlite:///ci-test.sqlite3
+          - db: postgres
+            database_url: postgres://minishop:ci-somente-teste@localhost:5432/minishop
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: minishop
+          POSTGRES_PASSWORD: ci-somente-teste
+          POSTGRES_DB: minishop
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U minishop -d minishop"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      DATABASE_URL: ${{ matrix.database_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with:
+          python-version: "3.13"
+          enable-cache: true
+      - run: uv sync
+      - name: Suíte completa
+        run: uv run pytest -q
+      - name: Porta de cobertura (camadas de negócio >= 80%)
+        if: matrix.db == 'sqlite'
+        run: bash scripts/cobertura_negocio.sh
+
+  docker:
+    name: Imagem Docker e smoke test
+    runs-on: ubuntu-24.04
+    needs: [lint, test]          # só constrói se a qualidade passou
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069  # v4.4.1
+      - name: Dockerfile sem avisos
+        run: docker build --check .
+      - name: Construir a imagem (sem publicar)
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc  # v7.4.0
+        with:
+          context: .
+          push: false
+          load: true
+          tags: minishop:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Smoke test com Docker Compose
+        run: |
+          cp .env.docker.example .env
+          bash scripts/smoke_docker.sh

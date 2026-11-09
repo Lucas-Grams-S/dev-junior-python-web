@@ -1,0 +1,3 @@
+httpx                              ✅ existe · 77 versões · primeira publicação 2019-07-19 · última 2026-08-31 · página do projeto: https://github.com/encode/httpx
+django-cupom-pro-max-ia-utils      ❌ NÃO EXISTE no PyPI (HTTP 404): provavelmente nome inventado; NÃO instale
+python-cupons-brasil-oficial       ❌ NÃO EXISTE no PyPI (HTTP 404): provavelmente nome inventado; NÃO instale

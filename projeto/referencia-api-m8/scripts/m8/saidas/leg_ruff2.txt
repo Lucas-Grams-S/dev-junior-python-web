@@ -1,0 +1,12 @@
+== ../m8/leg_v0.py
+leg_v0.py:9:5: C901 `processar_pedido` is too complex (17 > 10)
+leg_v0.py:9:5: PLR0912 Too many branches (22 > 12)
+leg_v0.py:10:12: PLW0603 Using the global statement to update `TOTAL_PEDIDOS` is discouraged
+leg_v0.py:18:19: S608 Possible SQL injection vector through string-based query construction
+leg_v0.py:67:5: T201 `print` found
+1 unsafe fix available with `--fix --unsafe-fixes`.
+== legado/pedidos_legado.py
+legado/pedidos_legado.py:39:12: PLW0603 Using the global statement to update `TOTAL_PEDIDOS` is discouraged
+legado/pedidos_legado.py:51:5: T201 `print` found
+1 unsafe fix available with `--fix --unsafe-fixes`.
+== legado/precificacao.py

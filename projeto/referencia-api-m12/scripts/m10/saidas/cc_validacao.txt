@@ -1,0 +1,6 @@
+  "ajustes"                                     ❌ recusada
+  "Corrigido bug"                               ❌ recusada
+  "fix: corrige arredondamento"                 ✅ aceita
+  "feat(orders): aplica cupom ao pedido"        ✅ aceita
+  "feat(orders)!: muda o formato do total"      ✅ aceita
+  "docs: README"                                ✅ aceita

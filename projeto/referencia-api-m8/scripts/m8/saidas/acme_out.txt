@@ -1,0 +1,21 @@
+PAYMENT_GATEWAY=fake  → obter_gateway() devolve GatewayFake
+PAYMENT_GATEWAY=acme  → obter_gateway() devolve GatewayAcme
+
+pedido #1 total 114.60; POST /pay/ → ch_e522f166a4aa (pending)
+  o MiniShop pediu a cobrança em centavos (11460); a Acme recebeu 2 requisição(ões): a 1ª deu 503 e o adaptador REPETIU com a mesma Idempotency-Key
+  cobranças criadas na Acme: 1 (uma só, apesar da repetição)
+
+webhooks no dialeto da Acme (evento 'charge.captured', valor em centavos, outra assinatura):
+  1) charge.captured válido                                  → 200 processed
+      estado: pedido=paid, pagamento=paid
+  2) o MESMO corpo de novo (duplicata)                       → 200 duplicate
+  3) assinatura inválida                                     → 401 invalid_signature
+  4) assinado com o segredo do MiniShop (outro dialeto!)     → 401 invalid_signature
+  5) evento antigo (replay, 10 min)                          → 401 invalid_signature
+  6) charge.authorized (a Acme tem, nós não usamos)          → 200 ignored
+  7) charge.declined depois do captured (fora de ordem)      → 200 ignored
+
+auditoria (WebhookEvent):
+  paid      processed  pagamento paid
+  ignored   ignored    tipo sem efeito: ignored
+  failed    ignored    fora de ordem: já está paid, chegou failed

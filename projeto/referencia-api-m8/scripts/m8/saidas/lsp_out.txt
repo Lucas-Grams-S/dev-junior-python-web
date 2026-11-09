@@ -1,0 +1,9 @@
+
+MemoriaPedidoRepository (o original)   → cumpre o contrato
+Guloso                                 → QUEBRA 1 promessa(s)
+      ✘ baixar_estoque devolve False quando NÃO há estoque (nunca fica negativo)
+SomenteLeitura                         → QUEBRA 2 promessa(s)
+      ✘ baixar_estoque devolve True quando há estoque (levantou NotImplementedError: somente leitura)
+      ✘ baixar_estoque devolve False quando NÃO há estoque (nunca fica negativo) (levantou NotImplementedError: somente leitura)
+SemRollback                            → QUEBRA 1 promessa(s)
+      ✘ a transação desfaz tudo se houver erro

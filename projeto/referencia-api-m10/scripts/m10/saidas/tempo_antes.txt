@@ -1,0 +1,2 @@
+235 passed, 1 skipped in 39.37s antes (execução 1): 40.05 s 
+235 passed, 1 skipped in 39.04s antes (execução 2): 39.72 s 

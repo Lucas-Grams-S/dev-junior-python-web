@@ -1,0 +1,72 @@
+# MiniShop em UMA instância EC2: o banco é o RDS (fora do Compose); Redis, web, worker e Nginx rodam aqui.
+# Variáveis: IMAGE (vem de image.env). Configuração e segredos: arquivo .env (gerado a partir do Parameter Store).
+name: minishop-prod
+
+x-app: &app
+  image: ${IMAGE:?defina IMAGE (veja image.env)}
+  env_file: .env
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }     # sem limite, o disco da instância enche de logs
+
+services:
+  redis:
+    image: redis:8
+    restart: unless-stopped
+    command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru", "--save", ""]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  migrate:
+    <<: *app
+    command: ["python", "manage.py", "migrate", "--noinput"]
+    restart: "no"
+
+  static:                       # copia os estáticos desta versão da imagem para o volume que o Nginx serve
+    <<: *app
+    user: "0"
+    command: ["sh", "-c", "cp -a /app/staticfiles/. /static/"]
+    volumes: ["static:/static"]
+    restart: "no"
+
+  web:
+    <<: *app
+    command: ["uvicorn", "config.asgi:application", "--host", "0.0.0.0", "--port", "8000", "--workers", "2",
+              "--proxy-headers", "--forwarded-allow-ips", "*", "--no-server-header"]
+    volumes: ["outbox:/data"]
+    healthcheck:
+      test: ["CMD", "python", "-m", "config.healthcheck"]
+      interval: 10s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+
+  worker:
+    <<: *app
+    command: ["celery", "-A", "config", "worker", "--loglevel=INFO", "--concurrency=2"]
+    volumes: ["outbox:/data"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+
+  nginx:
+    image: nginx:1.29-alpine
+    restart: unless-stopped
+    ports: ["80:80"]
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - static:/usr/share/nginx/html/static:ro
+    depends_on:
+      static: { condition: service_completed_successfully }
+      web: { condition: service_healthy }
+
+volumes:
+  static:
+  outbox:

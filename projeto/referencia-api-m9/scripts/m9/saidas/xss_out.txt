@@ -1,0 +1,6 @@
+1) autoescape (padrão):             <p>Ótimo! &lt;b&gt;negrito&lt;/b&gt; &amp; &quot;aspas&quot; &lt;script&gt;alert(1)&lt;/script&gt;</p>
+2) com |safe (DESLIGA a proteção):   <p>Ótimo! <b>negrito</b> & "aspas" <script>alert(1)</script></p>
+3) em atributo, entre aspas:         <input value="&quot; onfocus=&quot;x">
+4) format_html escapa os argumentos: <a href='/u/a&amp;b'>&lt;i&gt;x&lt;/i&gt;</a>
+5) mark_safe confia no que você passa: Ótimo! <b>negrito</b> & "aspas" <s...
+6) json_script (dados para o JS):    <script id="dados" type="application/json">{"texto": "\u003C/script\u003E\u003Cb\u003E"}</script>

@@ -1,0 +1,3 @@
+legado/pedidos_legado.py:45  if/elif sobre "dados.get('forma_pgto')" com 3 valores: ['pix', 'cartao', 'boleto']
+legado/pedidos_legado.py:34  if/elif sobre "dados['cupom']" com 3 valores: ['PROMO10', 'PROMO20', 'FRETEGRATIS']
+2 cadeia(s) suspeita(s)

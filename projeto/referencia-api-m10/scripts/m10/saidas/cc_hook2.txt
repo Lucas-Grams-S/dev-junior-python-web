@@ -1,0 +1,6 @@
+$ git commit --allow-empty -m "ajustes"
+mensagem de commit (Conventional Commits)................................Failed
+- hook id: conventional-commit
+- exit code: 14
+commit validation: failed!
+please enter a commit message in the commitizen format.

@@ -1,0 +1,2 @@
+  [ ] formatação (ruff format)   <-- FALHOU
+  [ ] lint (ruff check)   <-- FALHOU

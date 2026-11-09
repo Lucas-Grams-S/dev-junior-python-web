@@ -1,0 +1,15 @@
+# Override: envia os logs dos containers ao CloudWatch Logs (aula 13.08). Exige o papel da instância com logs:CreateLogStream e logs:PutLogEvents.
+# Uso: docker compose -f compose.prod.yaml -f compose.awslogs.yaml up -d
+services:
+  web:
+    logging:
+      driver: awslogs
+      options: { awslogs-region: "${AWS_REGION:-sa-east-1}", awslogs-group: /minishop/app, tag: web }
+  worker:
+    logging:
+      driver: awslogs
+      options: { awslogs-region: "${AWS_REGION:-sa-east-1}", awslogs-group: /minishop/app, tag: worker }
+  nginx:
+    logging:
+      driver: awslogs
+      options: { awslogs-region: "${AWS_REGION:-sa-east-1}", awslogs-group: /minishop/app, tag: nginx }

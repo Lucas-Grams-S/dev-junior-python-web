@@ -1,0 +1,18 @@
+CICLO 1: percentual
+  🔴 VERMELHO: 1 error in 0.07s  ←  E   ModuleNotFoundError: No module named 'apps.orders.cupons'
+  🟢 VERDE   : 1 passed in 0.01s
+CICLO 2: triangulação (outro percentual)
+  🔴 VERMELHO: 1 failed, 1 passed in 0.03s  ←  E       AssertionError: assert Decimal('20.00') == Decimal('12.00')
+  🟢 VERDE   : 2 passed in 0.01s
+CICLO 3: valor fixo
+  🔴 VERMELHO: 1 failed, 2 passed in 0.03s  ←  E       AssertionError: assert Decimal('50.00') == Decimal('25.00')
+  🟢 VERDE   : 3 passed in 0.01s
+CICLO 4: desconto não passa do subtotal
+  🔴 VERMELHO: 1 failed, 3 passed in 0.03s  ←  E       AssertionError: assert Decimal('500.00') == Decimal('120.00')
+  🟢 VERDE   : 4 passed in 0.01s
+CICLO 5: validade (injetando a data)
+  🔴 VERMELHO: 1 error in 0.07s  ←  E   ImportError: cannot import name 'CupomInvalido' from 'apps.orders.cupons' (/tmp/claude-1000/-home-lucas-docs-dev-jun
+  🟢 VERDE   : 6 passed in 0.01s
+CICLO 6: valor mínimo e arredondamento
+  🔴 VERMELHO: 3 failed, 6 passed in 0.04s  ←  E       TypeError: Cupom.__init__() got an unexpected keyword argument 'minimo'
+  🟢 VERDE   : 9 passed in 0.02s

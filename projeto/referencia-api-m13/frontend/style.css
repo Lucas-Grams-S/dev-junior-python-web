@@ -1,0 +1,26 @@
+:root { --fundo:#fafafa; --texto:#1b1f23; --suave:#5b6470; --borda:#d0d7de; --marca:#0b5cad; --ok:#0a6b2d; --erro:#b42318; }
+@media (prefers-color-scheme: dark) { :root { --fundo:#14181d; --texto:#e8ecf0; --suave:#9aa5b1; --borda:#2f3944; --marca:#6cb0ff; --ok:#4cc27a; --erro:#ff8a80; } }
+* { box-sizing: border-box; }
+body { margin:0; font:16px/1.5 system-ui, sans-serif; background:var(--fundo); color:var(--texto); }
+header { display:flex; justify-content:space-between; align-items:center; padding:.75rem 1rem; border-bottom:1px solid var(--borda); }
+h1, h2, h3 { margin:.25rem 0; }
+.pular { position:absolute; left:-999px; } .pular:focus { left:1rem; top:1rem; background:var(--fundo); padding:.5rem; }
+.layout { display:grid; grid-template-columns:1fr 20rem; gap:1rem; padding:1rem; }
+@media (max-width: 800px) { .layout { grid-template-columns:1fr; } }
+form#filtros { display:flex; flex-wrap:wrap; gap:.75rem; align-items:end; }
+label { display:grid; gap:.25rem; font-size:.9rem; }
+input, select, button { font:inherit; padding:.4rem .6rem; border:1px solid var(--borda); border-radius:.4rem; background:var(--fundo); color:var(--texto); }
+button { cursor:pointer; background:var(--marca); color:#fff; border-color:var(--marca); } button:disabled { opacity:.5; cursor:not-allowed; }
+:focus-visible { outline:3px solid var(--marca); outline-offset:2px; }
+.grade { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(14rem, 1fr)); gap:1rem; }
+.card { border:1px solid var(--borda); border-radius:.6rem; padding:.75rem; display:grid; gap:.25rem; }
+.preco { font-weight:700; } .suave { color:var(--suave); font-size:.9rem; margin:0; }
+.estado { grid-column:1/-1; padding:1rem; } .erro { color:var(--erro); }
+.aviso { margin:.5rem 1rem; padding:.5rem .75rem; border-radius:.4rem; border:1px solid var(--borda); }
+.aviso.ok { border-color:var(--ok); color:var(--ok); } .aviso.erro { border-color:var(--erro); color:var(--erro); }
+aside { border:1px solid var(--borda); border-radius:.6rem; padding:.75rem; align-self:start; }
+aside ul { list-style:none; padding:0; } aside li { display:flex; gap:.4rem; align-items:center; flex-wrap:wrap; margin:.4rem 0; }
+aside input[type=number] { width:4rem; }
+dialog { border:1px solid var(--borda); border-radius:.6rem; background:var(--fundo); color:var(--texto); }
+dialog form { display:grid; gap:.6rem; min-width:16rem; }
+.paginas { display:flex; gap:.5rem; justify-content:center; margin:1rem 0; }

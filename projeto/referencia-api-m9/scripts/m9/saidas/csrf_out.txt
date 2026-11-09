@@ -1,0 +1,23 @@
+== 1) CSRF numa rota que usa COOKIE de sessão (login do admin), com a verificação ligada
+   POST sem token CSRF                    → 403  (403 = recusado pelo Django)
+   POST com token CSRF + Referer válido   → 302  (302 = login aceito)
+   token válido, mas Referer de OUTRO site → 403  (403: em HTTPS o Django confere o Referer/Origin)
+
+== 2) Atributos dos cookies emitidos no login (DEBUG=0)
+   csrftoken  Secure=True  HttpOnly=False SameSite=Lax
+   sessionid  Secure=True  HttpOnly=True  SameSite=Lax
+
+== 3) A API usa JWT no cabeçalho Authorization (o navegador NÃO o anexa sozinho)
+   cabeçalho: {'alg': 'HS256', 'typ': 'JWT'}
+   payload  : {'token_type': 'access', 'exp': 1794177700, 'iat': 1794176800, 'user_id': '3'} (qualquer um LÊ; o que ninguém faz é ASSINAR)
+   validade do access: 900 s
+   token válido → 200 · payload alterado (assinatura antiga) → 401 · algoritmo 'none' sem assinatura → 401
+
+== 4) Logout: sessão x JWT
+   logout (refresh vai para a lista negra) → 200; usar o refresh de novo → 401
+   o ACCESS antigo continua valendo até expirar → 200  (é por isso que ele dura só 900 s)
+   sessão: antes do logout → 200; depois (a sessão some NO SERVIDOR) → 302
+
+== 5) CORS: quem pode LER respostas da API de outra origem
+   preflight de http://127.0.0.1:8200            → 200  Allow-Origin='http://127.0.0.1:8200'  Allow-Credentials=None
+   preflight de https://site-malicioso.example   → 200  Allow-Origin=None  Allow-Credentials=None

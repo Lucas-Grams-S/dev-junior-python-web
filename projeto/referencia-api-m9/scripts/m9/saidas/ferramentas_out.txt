@@ -1,0 +1,3 @@
+== ruff (regras S, as do bandit) no código do MiniShop, sem tests/seclab/migrations/legado:
+All checks passed!
+== bandit (todas as severidades) em apps e config:

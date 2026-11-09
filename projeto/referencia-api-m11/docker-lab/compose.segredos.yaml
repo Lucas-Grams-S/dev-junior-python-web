@@ -1,0 +1,12 @@
+name: minishop-segredos
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: minishop
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password   # a imagem lê o ARQUIVO; a senha não aparece no ambiente
+      POSTGRES_DB: minishop
+    secrets: [db_password]
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

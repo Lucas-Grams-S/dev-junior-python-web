@@ -1,0 +1,11 @@
+# Uso: docker compose -f compose.yaml -f compose.dev.yaml up
+# Acrescenta/substitui configurações só para o desenvolvimento.
+services:
+  web:
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    environment:
+      DEBUG: "1"             # sobrescreve o valor do .env
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"   # o mesmo usuário do host: arquivos criados no container não ficam de outro dono
+    volumes:
+      - ./apps:/app/apps     # bind mount: o que você edita no host aparece no container na hora
+      - ./config:/app/config

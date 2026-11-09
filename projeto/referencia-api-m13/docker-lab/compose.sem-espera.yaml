@@ -1,0 +1,10 @@
+name: minishop-corrida
+services:
+  db:
+    image: postgres:18
+    environment: {POSTGRES_USER: minishop, POSTGRES_PASSWORD: dev-somente-local, POSTGRES_DB: minishop}
+  migrate:
+    image: minishop:dev
+    command: ["python", "-c", "import psycopg; psycopg.connect(\"postgres://minishop:dev-somente-local@db:5432/minishop\"); print(\"conectou\")"]
+    env_file: ../.env
+    depends_on: [db]          # só espera o container INICIAR, não o Postgres ficar pronto

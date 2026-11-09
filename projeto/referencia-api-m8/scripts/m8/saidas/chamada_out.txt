@@ -1,0 +1,7 @@
+função no mesmo processo :       0.03 µs por chamada
+HTTP local (conexão viva) : mediana      279 µs · p99      682 µs
+razão (mediana HTTP / função): ~10,235x
+ 1 dependências a 99,9% → disponibilidade combinada 99.90% (~43 min fora do ar/mês)
+ 3 dependências a 99,9% → disponibilidade combinada 99.70% (~129 min fora do ar/mês)
+ 5 dependências a 99,9% → disponibilidade combinada 99.50% (~216 min fora do ar/mês)
+10 dependências a 99,9% → disponibilidade combinada 99.00% (~430 min fora do ar/mês)

@@ -1,0 +1,9 @@
+
+transacao() = nullcontext (o fake ingênuo)
+  erro esperado: Teclado: o estoque mudou, tente novamente.
+  estoque do Mouse: 3 (era 5) | pedidos gravados: 1 | itens no carrinho: 2
+  → INCONSISTENTE: o Mouse foi baixado e o pedido ficou criado, mas a operação falhou
+transacao() com foto do estado e restauração (o fake atual)
+  erro esperado: Teclado: o estoque mudou, tente novamente.
+  estoque do Mouse: 5 (era 5) | pedidos gravados: 0 | itens no carrinho: 2
+  → CONSISTENTE: nada mudou

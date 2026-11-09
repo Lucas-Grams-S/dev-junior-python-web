@@ -1,0 +1,6 @@
+estilos: estado_com_fake | mock_sequencia_exata | mock_so_o_essencial
+0) código original (nenhuma falha)
+1) REFATORAÇÃO inofensiva (ordem)mock_sequencia_exata_de_chamadas 
+2) BUG REAL: não baixa o estoque estado_com_fake_o_resultado_importa mock_sequencia_exata_de_chamadas 
+3) BUG REAL: não esvazia o carrinhoestado_com_fake_o_resultado_importa mock_sequencia_exata_de_chamadas mock_so_o_essencial 
+restaurado                        

@@ -1,0 +1,20 @@
+dependências entre camadas (origem → destino): número de imports
+  dados      → dados        3
+  interface  → dados        9
+  interface  → interface    8
+  interface  → serviços     6
+  outro      → dados        4
+  outro      → interface    1
+  outro      → serviços     1
+  serviços   → dados        9
+  serviços   → serviços     2
+
+regras que a arquitetura em camadas quer garantir:
+  ✘ apps.payments.services  →  channels
+      R1: serviços/dados não devem depender de framework de interface (DRF/Channels)
+
+dependências entre APPS (quem usa quem):
+  cart      → catalog
+  orders    → cart, catalog, payments
+  payments  → orders
+  realtime  → orders

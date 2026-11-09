@@ -1,0 +1,6 @@
+casos: 80,000 (totais de R$ 0,01 a R$ 200,00 × 4 percentuais), mesma política de arredondamento
+divergências float+round() × Decimal+ROUND_HALF_UP: 4,500 (5.62%)
+  exemplo: total 0.02 com 25% → float+round dá 0.01, Decimal dá 0.02
+  exemplo: total 0.06 com 25% → float+round dá 0.04, Decimal dá 0.05
+  exemplo: total 0.3 com 5% → float+round dá 0.28, Decimal dá 0.29
+das 4,500 divergências, 4,500 (100%) são EMPATES de meio centavo (o valor exato termina em ...5): o float não representa 0,015 exatamente

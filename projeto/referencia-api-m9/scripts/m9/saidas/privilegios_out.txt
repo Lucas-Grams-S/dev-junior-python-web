@@ -1,0 +1,21 @@
+papel         operação                           resultado
+minishop_app  ler produtos                       permitido (retornou 64)
+minishop_app  atualizar um produto               permitido
+minishop_app  inserir categoria                  permitido
+minishop_app  apagar a categoria de teste        permitido
+minishop_app  ALTERAR a estrutura da tabela      NEGADO  → must be owner of table catalog_product
+minishop_app  APAGAR a tabela de produtos        NEGADO  → must be owner of table catalog_product
+minishop_app  ESVAZIAR a tabela de produtos      NEGADO  → permission denied for table catalog_product
+minishop_app  CRIAR uma tabela nova              NEGADO  → permission denied for schema public
+minishop_app  criar um papel                     NEGADO  → permission denied to create role
+
+minishop_ro   ler produtos                       permitido (retornou 64)
+minishop_ro   atualizar um produto               NEGADO  → permission denied for table catalog_product
+minishop_ro   inserir categoria                  NEGADO  → permission denied for table catalog_category
+minishop_ro   apagar a categoria de teste        NEGADO  → permission denied for table catalog_category
+minishop_ro   ALTERAR a estrutura da tabela      NEGADO  → must be owner of table catalog_product
+minishop_ro   APAGAR a tabela de produtos        NEGADO  → must be owner of table catalog_product
+minishop_ro   ESVAZIAR a tabela de produtos      NEGADO  → permission denied for table catalog_product
+minishop_ro   CRIAR uma tabela nova              NEGADO  → permission denied for schema public
+minishop_ro   criar um papel                     NEGADO  → permission denied to create role
+

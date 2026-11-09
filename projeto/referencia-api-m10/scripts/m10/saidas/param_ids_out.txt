@@ -1,0 +1,6 @@
+test_notificacao_conforme_o_modo[sync-executa-na-hora] PASSED
+test_notificacao_conforme_o_modo[async-enfileira-so-no-commit] PASSED
+test_notificacao_conforme_o_modo[off-nao-faz-nada] PASSED
+test_cancela_pendentes_antigos_avancando_o_relogio PASSED
+test_pagar_com_gateway_dublado[gateway-ok] PASSED
+test_pagar_com_gateway_dublado[gateway-fora-do-ar] PASSED

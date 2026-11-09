@@ -1,0 +1,30 @@
+# Controle de versão e ambientes locais
+.git
+.gitignore
+.venv
+.env
+.env.*
+!.env.example
+
+# Lixo gerado
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+*.sqlite3
+outbox.jsonl
+staticfiles/
+
+# Não pertencem à imagem de execução
+tests/
+docs/
+frontend/
+seclab/
+grpc_demo/
+docker-lab/
+compose*.yaml
+Dockerfile
+.dockerignore
+*.md

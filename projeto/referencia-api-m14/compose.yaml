@@ -1,0 +1,95 @@
+name: minishop-docker
+
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: minishop
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+      POSTGRES_DB: minishop
+    volumes:
+      - pgdata:/var/lib/postgresql        # PostgreSQL 18+: a pasta de dados fica DENTRO de /var/lib/postgresql
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U minishop -d minishop"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:8
+    networks: [backend]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  migrate:
+    image: minishop:dev
+    command: ["python", "manage.py", "migrate", "--noinput"]
+    env_file: .env
+    networks: [backend]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  web:
+    build: .
+    image: minishop:dev
+    env_file: .env
+    environment:
+      NUM_PROXIES: "1"            # um proxy confiável (o Nginx) na frente
+      SECURE_SSL_REDIRECT: "1"     # produção: o Django exige HTTPS (quem termina o TLS é o Nginx)
+    expose: ["8000"]              # visível só para os outros containers (o Nginx); nada publicado no host
+    networks: [frontend, backend]
+    volumes:
+      - outbox:/data
+    healthcheck:
+      test: ["CMD", "python", "-m", "config.healthcheck"]
+      interval: 10s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+
+  nginx:
+    build:
+      context: ./nginx
+      additional_contexts:
+        app: service:web           # usa a imagem construída para o serviço "web"
+    ports:
+      - "127.0.0.1:8080:80"
+      - "127.0.0.1:8443:443"
+    volumes:
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks: [frontend]
+    depends_on:
+      web:
+        condition: service_healthy
+
+  worker:
+    image: minishop:dev
+    command: ["celery", "-A", "config", "worker", "--loglevel=INFO", "--concurrency=2"]
+    env_file: .env
+    networks: [backend]
+    volumes:
+      - outbox:/data
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  pgdata:
+  outbox:

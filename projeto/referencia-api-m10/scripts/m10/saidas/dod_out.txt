@@ -1,0 +1,11 @@
+Definição de pronto (parte automática)
+  [x] testes passam (todos os níveis, ordem aleatória)
+  [x] cobertura das camadas de negócio >= 80%
+  [x] formatação (ruff format)
+  [x] lint (ruff check)
+  [x] tipos (mypy)
+  [x] arquitetura (import-linter)
+  [x] sem migração pendente
+  [x] contrato OpenAPI válido e sem avisos
+  [x] dependências sem vulnerabilidade conhecida (pip-audit)
+Parte humana (marque no PR): revisão aprovada · critérios de aceitação demonstrados · documentação/ADR atualizados · sem dado pessoal em log

@@ -1,0 +1,9 @@
+equivalência em 9 casos (3 formas × 3 totais): True
+  pix     sobre R$ 200,00 → desconto   10.00
+  cartao  sobre R$ 200,00 → desconto       0
+  boleto  sobre R$ 200,00 → desconto   -2.50
+forma desconhecida → forma de pagamento inválida: cheque
+
+após registrar 'fidelidade' em OUTRO lugar do código:
+  formas conhecidas: ['boleto', 'cartao', 'fidelidade', 'pix']
+  fidelidade sobre R$ 200,00 → desconto 6.00  (nenhuma linha existente foi editada)

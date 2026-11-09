@@ -1,0 +1,23 @@
+[project]
+name = "minishop-referencia"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2,<5.3",
+    "django-cors-headers>=4.9,<4.10",
+    "django-filter>=26.2",
+    "djangorestframework>=3.18,<3.19",
+    "djangorestframework-simplejwt>=5.5,<5.6",
+    "drf-spectacular>=0.30,<0.31",
+    "graphql-core>=3.3.2",
+    "grpcio>=1.85.1",
+    "grpcio-tools>=1.85.1",
+    "pillow>=13.0.0",
+    "pytest>=9.2.0",
+    "pytest-django>=4.14.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=7.1.0",
+]

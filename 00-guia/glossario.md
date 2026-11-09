@@ -1,0 +1,499 @@
+# Glossário
+
+> Atualizado ao fim de cada módulo. Formato: **termo (EN)**: definição curta · aula.
+
+## Módulo 0
+- **absolute path / caminho absoluto**: caminho que começa na raiz `/` · 0.01
+- **relative path / caminho relativo**: caminho a partir da pasta atual (`.`, `..`) · 0.01
+- **shell**: programa que interpreta os comandos digitados (ex.: `bash`) · 0.01
+- **PATH**: lista de pastas onde o shell procura programas · 0.01
+- **stdin / stdout / stderr**: entrada, saída e saída de erro padrão de um programa · 0.01
+- **pipe (`|`)**: liga a saída de um comando à entrada do próximo · 0.01
+- **permissions / permissões**: `r`, `w`, `x` para dono, grupo e outros; `chmod` altera · 0.01
+- **virtual environment / ambiente virtual**: pasta com Python e pacotes isolados por projeto · 0.02
+- **dependency / dependência**: pacote de que o projeto precisa · 0.02
+- **lockfile**: arquivo com as versões exatas de todas as dependências (`uv.lock`) · 0.02
+- **PyPI**: repositório público de pacotes Python · 0.02
+- **commit**: instantâneo gravado no histórico do Git · 0.03
+- **staging area**: área onde se monta o próximo commit · 0.03
+- **working tree**: arquivos como estão no disco, no momento · 0.03
+- **branch**: ponteiro móvel para um commit; linha de desenvolvimento · 0.03/0.04
+- **remote / origin**: cópia do repositório em outro lugar (GitHub) · 0.04
+- **pull request (PR)**: pedido de integração de uma branch, com revisão · 0.04
+- **merge conflict**: duas branches alteraram as mesmas linhas; exige decisão humana · 0.04
+- **traceback**: pilha de chamadas impressa quando ocorre uma exceção · 0.05
+- **breakpoint**: ponto em que o debugger pausa o programa · 0.05
+- **Conventional Commits**: padrão `tipo: descrição` para mensagens de commit · 0.03
+
+## Módulo 1
+- **variable / variável**: nome que aponta para um objeto · 1.01
+- **type / tipo**: formato do valor (`int`, `float`, `str`, `bool`, `None`) · 1.01
+- **Decimal**: número decimal exato, usado para dinheiro · 1.01
+- **truthy / falsy**: valores que, como condição, valem verdadeiro/falso · 1.02
+- **short-circuit / curto-circuito**: `and`/`or` param ao conhecer o resultado · 1.02
+- **off-by-one**: erro de ±1 em limites e índices · 1.03
+- **scope / escopo (LEGB)**: onde um nome é visível: Local, Enclosing, Global, Built-in · 1.04
+- **mutable / mutável**: objeto que pode mudar no lugar (list, dict, set) · 1.05
+- **slice / fatia**: `seq[ini:fim:passo]` · 1.05
+- **hashable**: objeto imutável que pode ser chave de dict ou elemento de set · 1.06
+- **hash table / tabela hash**: estrutura que dá busca O(1) média · 1.06
+- **comprehension**: expressão compacta que cria lista/dict/set · 1.07
+- **exception / exceção**: objeto de erro que sobe pela pilha até ser tratado · 1.08
+- **EAFP / LBYL**: pedir perdão vs olhar antes de pular · 1.08
+- **serialization / serialização**: converter objeto em texto/bytes (JSON) · 1.09
+- **module / package**: arquivo `.py` / pasta de módulos · 1.10
+- **assert / fixture / parametrize**: afirmação de teste / dado preparado / mesmo teste com vários dados · 1.11
+- **class / instance**: molde / objeto criado a partir dele · 1.12
+- **encapsulation / encapsulamento**: proteger regras e estado dentro do objeto · 1.12
+- **inheritance / composition**: relação “é um” / “tem um” · 1.13
+- **polymorphism / polimorfismo**: mesma interface, comportamentos diferentes · 1.13
+- **dataclass**: classe que gera `__init__`, `__repr__`, `__eq__` · 1.13
+- **dunder method**: método especial `__nome__` chamado pelo Python · 1.14
+- **type hint**: anotação de tipo, ignorada em execução, lida por ferramentas · 1.14
+- **iterator / generator**: objeto com `__next__` / função com `yield` · 1.15
+- **decorator**: função que embrulha outra · 1.16
+- **context manager**: objeto usado com `with` (`__enter__`/`__exit__`) · 1.16
+- **recursion / base case**: função que chama a si mesma / condição de parada · 1.17
+- **Big-O**: como o custo cresce com o tamanho da entrada · 1.17
+- **memoization / memoização**: guardar resultados já calculados · 1.17
+- **exit code**: número devolvido pelo processo; 0 = sucesso · 1.19
+- **race condition / condição de corrida**: resultado depende do tempo de operações concorrentes · 1.18
+
+## Módulo 2
+- **client / server**: quem pede / quem atende · 2.01
+- **IP address**: endereço de uma máquina na rede (IPv4: 32 bits) · 2.01
+- **port / porta**: número que identifica o serviço dentro da máquina · 2.01
+- **DNS**: sistema que converte nomes em IPs (registros A, AAAA, CNAME, MX, TXT; TTL) · 2.01
+- **socket**: ponto de comunicação (IP + porta) · 2.01
+- **TCP / UDP**: transporte confiável e ordenado / sem garantias · 2.01
+- **handshake**: troca inicial de mensagens para estabelecer uma conexão (TCP, TLS) · 2.01
+- **loopback (`127.0.0.1`)**: a própria máquina · 2.01
+- **CIDR**: notação `rede/bits` para faixas de IPs · 2.01
+- **HTTP**: protocolo de requisição/resposta da web · 2.02
+- **idempotent / idempotente**: repetir tem o mesmo efeito que fazer uma vez · 2.02
+- **safe method / método seguro**: não altera estado no servidor · 2.02
+- **status code**: número que resume o resultado (2xx, 3xx, 4xx, 5xx) · 2.02
+- **header**: metadado da requisição/resposta (`Content-Type`, `Authorization`) · 2.02
+- **stateless**: o servidor não guarda memória entre requisições · 2.02
+- **TLS / HTTPS**: criptografia e autenticação do transporte; HTTP sobre TLS · 2.03
+- **certificate / CA**: prova de identidade de um domínio / quem assina certificados · 2.03
+- **URL / query string / fragment**: endereço do recurso / parâmetros após `?` / parte após `#` · 2.03
+- **percent-encoding**: `%XX` para bytes especiais em URLs · 2.03
+- **cookie**: dado que o servidor pede ao navegador para devolver (`Set-Cookie`/`Cookie`) · 2.03
+- **session / sessão**: estado do usuário guardado no servidor e ligado a um ID · 2.03
+- **HttpOnly / Secure / SameSite**: atributos de segurança de cookie · 2.03
+- **TTFB**: tempo até o primeiro byte da resposta · 2.04
+- **p95**: valor abaixo do qual ficam 95% das medições · 2.04
+- **router / roteador**: escolhe a função certa pela URL e pelo método · 2.05
+- **keep-alive**: reutilização da conexão TCP para várias requisições · 2.05
+
+## Módulo 3
+- **relational database / banco relacional**: dados em tabelas ligadas por chaves · 3.01
+- **primary key (PK) / foreign key (FK)**: identificador único da linha / referência à PK de outra tabela · 3.01
+- **surrogate key / chave artificial**: id gerado, sem significado de negócio · 3.01
+- **ER diagram**: diagrama de entidades e relacionamentos · 3.01
+- **cardinality / cardinalidade**: 1:1, 1:N, N:N · 3.01
+- **junction table / tabela de junção**: resolve o N:N e guarda atributos da relação (`order_items`) · 3.01
+- **lost update**: uma escrita sobrescreve a outra por ler-calcular-gravar · 3.01 / 3.09
+- **normalization / normalização (1FN, 2FN, 3FN)**: eliminar redundância e anomalias · 3.02
+- **functional dependency / dependência funcional**: `A → B` · 3.02
+- **denormalization / desnormalização**: redundância deliberada, com plano de consistência · 3.02
+- **DDL / DML / DQL**: definir estrutura / manipular dados / consultar · 3.03
+- **identity column**: id gerado automaticamente (`GENERATED ALWAYS AS IDENTITY`) · 3.03
+- **NULL / três valores**: ausência de valor; comparações viram "desconhecido" · 3.03 / 3.04
+- **upsert (`ON CONFLICT`)**: insere ou atualiza/ignora em caso de conflito · 3.03
+- **keyset pagination / paginação por cursor**: pagina com `WHERE (col, id) > (...)` em vez de `OFFSET` · 3.04
+- **JOIN (INNER, LEFT, FULL, CROSS)**: combinação de tabelas · 3.05
+- **anti-join**: linhas sem par (`LEFT JOIN ... IS NULL`, `NOT EXISTS`) · 3.05
+- **aggregate / GROUP BY / HAVING**: resumo de grupos / agrupar / filtrar grupos · 3.06
+- **subquery / CTE / window function**: consulta aninhada / `WITH` / cálculo sobre janela de linhas · 3.06
+- **constraint**: regra imposta pelo banco (PK, UNIQUE, NOT NULL, CHECK, FK) · 3.08
+- **index (B-tree)**: estrutura que acelera buscas · 3.08
+- **seq scan / index scan / EXPLAIN**: leitura sequencial / por índice / plano de execução · 3.08
+- **selectivity / seletividade**: fração das linhas que um filtro devolve · 3.08
+- **transaction / ACID**: unidade tudo-ou-nada / atomicidade, consistência, isolamento, durabilidade · 3.09
+- **MVCC**: versões de linha que permitem leitores sem bloquear escritores · 3.09
+- **isolation level**: `READ COMMITTED`, `REPEATABLE READ`, `SERIALIZABLE` · 3.09
+- **deadlock**: transações esperando umas pelas outras · 3.09
+- **SQL injection**: entrada do usuário alterando a estrutura do SQL · 3.10
+- **parameterized query / consulta parametrizada**: valores enviados separados do comando · 3.10
+- **least privilege / menor privilégio**: dar só as permissões necessárias · 3.10
+- **ORM**: mapeamento objeto-relacional (Active Record × Data Mapper) · 3.11
+- **migration / migração**: mudança versionada do schema · 3.11
+- **N+1**: uma consulta a mais por item da lista · 3.11
+- **NoSQL**: chave-valor (Redis), documento (MongoDB), colunar, grafo, busca · 3.11
+- **view / materialized view**: consulta salva / resultado guardado (precisa de REFRESH) · 3.12
+- **pg_dump / pg_restore**: backup e restauração · 3.12
+- **topological sort**: ordenação respeitando dependências · 3.12
+
+## Módulo 4
+- **semantic HTML / HTML semântico**: tags escolhidas pelo significado (`nav`, `main`, `button`) · 4.01
+- **DOM**: árvore de objetos que representa a página · 4.01 / 4.05
+- **form `name`**: chave do campo enviada na requisição (sem `name`, não vai) · 4.01
+- **cascade / specificity / cascata e especificidade**: como o CSS decide qual regra vale · 4.02
+- **box model**: conteúdo + padding + borda + margem; `box-sizing: border-box` · 4.02
+- **rem / em / px / vw**: unidades CSS · 4.02
+- **CSS custom property**: variável CSS (`--cor-primaria`) · 4.02
+- **Flexbox / Grid**: layout em uma dimensão / em duas dimensões · 4.03
+- **responsive / mobile-first**: layout que se adapta; CSS base para o menor e `min-width` para ampliar · 4.03
+- **viewport**: área visível; a meta tag evita o layout "desktop" no celular · 4.03
+- **closure**: função que lembra o escopo onde nasceu · 4.04
+- **truthy / falsy (JS)**: `[]` e `{}` são truthy · 4.04
+- **`===` / coercion**: igualdade estrita / conversão implícita de tipos · 4.04
+- **event / bubbling / delegation**: evento / subida pelos ancestrais / um listener no contêiner · 4.05
+- **XSS**: injeção de script via dado não escapado (`innerHTML`) · 4.05
+- **debounce**: espera o usuário parar de disparar o evento · 4.05
+- **event loop / microtask**: fila de execução do JS; Promises rodam antes dos timers · 4.06
+- **Promise / async-await**: valor futuro / sintaxe para esperá-lo · 4.06
+- **fetch / `response.ok`**: só rejeita em erro de rede; 4xx/5xx exigem checagem · 4.06
+- **same-origin policy / CORS / preflight**: origem = esquema+host+porta; autorização por cabeçalhos; `OPTIONS` prévio · 4.06
+- **race condition (front)**: respostas fora de ordem sobrescrevendo a mais recente · 4.07
+- **loading / success / empty / error**: os quatro estados de uma tela que busca dados · 4.07
+- **UI = f(state)**: a interface descrita como função do estado · 4.08
+- **SPA / SSR / MPA**: app no cliente / renderização no servidor com hidratação / páginas completas · 4.08
+- **HTMX**: atributos HTML que trocam trechos da página por HTML do servidor · 4.08
+- **SRI**: hash `integrity` que valida scripts de CDN · 4.08
+- **WCAG / POUR**: diretrizes de acessibilidade / perceptível, operável, compreensível, robusto · 4.08
+- **ARIA**: atributos que acrescentam significado quando o HTML nativo não basta · 4.08
+- **contrast ratio / razão de contraste**: ≥ 4,5:1 para texto normal em AA · 4.08
+- **axe-core**: verificador automático de acessibilidade · 4.08
+
+## Módulo 5
+- **MVT (Model-View-Template)**: variação do MVC no Django: modelo, view e template; o roteador faz o papel de controlador · 5.01
+- **app**: módulo coeso e reutilizável de um projeto Django, registrado em `INSTALLED_APPS` · 5.01
+- **middleware**: camada que processa toda requisição/resposta (sessão, CSRF, segurança) · 5.01
+- **URLconf**: lista `urlpatterns` que liga URLs a views · 5.02
+- **CSRF**: ataque que faz o navegador logado enviar uma requisição indesejada; combatido com token · 5.02
+- **autoescape**: escape automático de HTML nas variáveis do template · 5.03
+- **context processor**: função que injeta variáveis em todos os templates · 5.03
+- **migration / migração**: arquivo versionado que descreve uma mudança de schema · 5.04
+- **QuerySet (lazy)**: consulta que só vai ao banco quando o resultado é necessário · 5.05
+- **`Q` / `F`**: condições combináveis / referência a colunas dentro da consulta · 5.05
+- **`annotate` / `aggregate`**: cálculo por objeto/grupo / resumo da consulta inteira · 5.06
+- **N+1**: uma consulta para a lista mais uma por item para acessar a relação · 5.07
+- **`select_related` / `prefetch_related`**: carregam relações com `JOIN` / com consulta extra em lote · 5.07
+- **ModelAdmin**: classe que personaliza o Django Admin · 5.08
+- **CBV (class-based view)**: view em classe; `dispatch()` escolhe o método HTTP · 5.09
+- **mixin**: classe pequena que acrescenta comportamento por herança · 5.09
+- **MRO**: ordem de busca de métodos na herança (C3) · 5.09
+- **ModelForm**: formulário derivado de um model · 5.10
+- **PRG (Post/Redirect/Get)**: redirecionar após um POST bem-sucedido · 5.10
+- **hash com sal**: impressão digital lenta e irreversível da senha, com valor aleatório por senha · 5.11
+- **sessão**: estado no servidor ligado ao cookie `sessionid` · 5.11
+- **open redirect**: redirecionamento para site arbitrário via parâmetro `next` · 5.11
+- **grupo / permissão**: conjunto de permissões atribuído a usuários; `add/change/delete/view` por model · 5.12
+- **IDOR**: acesso a objeto alheio trocando o identificador · 5.12
+- **`collectstatic` / `STATIC_ROOT`**: reúne os estáticos para servir em produção · 5.13
+- **WhiteNoise**: middleware que serve estáticos pelo próprio Django · 5.13
+- **12-factor (config)**: configuração vem do ambiente, não do código · 5.14
+- **logger / handler / level**: quem registra / para onde vai / gravidade mínima · 5.14
+- **`OFFSET` × cursor (keyset)**: paginação por deslocamento × por último item visto · 5.15
+- **camada de serviço**: funções com as regras de negócio, fora das views · 5.16
+- **`transaction.atomic`**: bloco tudo-ou-nada; erro faz `ROLLBACK` · 5.17
+- **`select_for_update`**: trava as linhas lidas até o fim da transação · 5.17
+- **deadlock**: transações esperando umas pelas outras por travas em ordem inversa · 5.17
+- **seed / idempotência**: dados de exemplo / rodar várias vezes sem duplicar · 5.18
+
+## Módulo 6
+- **REST**: estilo de arquitetura sobre HTTP (recursos, interface uniforme, sem estado, cache, camadas) · 6.01
+- **stateless / sem estado**: o servidor não guarda contexto de conversa; cada requisição traz tudo · 6.01
+- **método seguro / idempotente**: não altera estado / repetir N vezes = 1 vez · 6.01
+- **modelo de Richardson**: níveis de maturidade REST (0 a 3) · 6.01
+- **Idempotency-Key**: cabeçalho que torna um `POST` repetível sem duplicar o efeito · 6.01/6.13
+- **recurso / URI**: substantivo com endereço próprio (`/products/12/`) · 6.02
+- **contrato (da API)**: o que clientes podem esperar (rotas, campos, status, erros) · 6.02
+- **ISO 8601 / RFC 3339**: formato de datas com fuso (`2026-11-08T14:30:00Z`) · 6.02
+- **serializer**: converte objetos em tipos simples (JSON) e valida a entrada · 6.03
+- **`ModelSerializer`**: serializer derivado de um model · 6.03
+- **viewset / router**: agrupa as ações de um recurso / gera as rotas a partir dele · 6.04
+- **`@action`**: rota extra de um viewset (`/orders/{id}/cancel/`) · 6.04
+- **exception handler**: ponto único que padroniza os erros da API · 6.05
+- **`code` (de erro)**: identificador estável de um erro para o programa decidir · 6.05
+- **422 Unprocessable Content**: dados válidos que violam uma regra de negócio · 6.05
+- **JWT**: token assinado (cabeçalho.payload.assinatura), legível e não criptografado · 6.06
+- **access / refresh token**: credencial curta de uso / credencial longa para renovar · 6.06
+- **rotação do refresh / blacklist**: cada refresh gera outro, e o antigo é invalidado · 6.06
+- **`has_object_permission`**: autorização por objeto (só em `get_object()`) · 6.07
+- **negar por padrão**: permissão global `IsAuthenticated`, exceções explícitas · 6.07
+- **IDOR / BOLA**: acessar objeto alheio trocando o identificador · 6.07
+- **`FilterSet`**: classe do django-filter que declara os filtros da API · 6.08
+- **lista permitida (`ordering_fields`)**: só estes campos podem ordenar · 6.08
+- **paginação por cursor**: usa o último item visto, sem `OFFSET` · 6.09
+- **throttling / rate limit**: limite de requisições por tempo (`429` + `Retry-After`) · 6.09
+- **OpenAPI / Swagger**: especificação (e ferramentas) que descreve uma API HTTP · 6.10
+- **drf-spectacular**: gera o schema OpenAPI a partir do código DRF · 6.10
+- **versionamento da API**: `/api/v1/`, para evoluir sem quebrar clientes · 6.10
+- **mudança que quebra (breaking change)**: remover/renomear campo, mudar tipo, tornar obrigatório · 6.10
+- **origem / política de mesma origem**: esquema + host + porta; o JS só lê respostas da própria origem · 6.11
+- **CORS / preflight**: autorização por cabeçalhos para outras origens / `OPTIONS` prévio · 6.11
+- **teste de contrato**: confere que a resposta bate com o schema OpenAPI · 6.12
+- **teste de mutação**: quebrar o código de propósito para ver se algum teste falha · 6.12
+- **GraphQL / gRPC**: API em que o cliente escolhe os campos / RPC binário com contrato `.proto` · 6.13
+- **protocol buffers**: formato binário compacto do gRPC · 6.13
+- **N+1 em resolvers**: consulta por item ao resolver campos relacionados · 6.13
+- **single-flight (refresh)**: várias chamadas compartilham uma única renovação de token · 6.14
+- **E2E (ponta a ponta)**: teste que dirige o sistema pelo navegador real · 6.14
+
+## Módulo 7
+- **bloqueante / não bloqueante**: a chamada só retorna ao terminar / retorna na hora e o programa volta a perguntar · 7.01
+- **I/O-bound / CPU-bound**: limitado por espera / por cálculo (tempo de parede ≫ CPU / ≈ CPU) · 7.01
+- **concorrência / paralelismo**: lidar com várias tarefas (intercalando) / executar ao mesmo instante · 7.01
+- **thread / processo**: linha de execução que compartilha memória / programa com memória própria · 7.02
+- **GIL**: trava global do CPython: uma thread executa bytecode Python por vez · 7.02
+- **free-threaded**: compilação do Python sem GIL (experimental no 3.13, suportada no 3.14) · 7.02
+- **condição de corrida (*race condition*)**: resultado dependente da ordem de execução; corrige-se com `Lock` ou operação atômica · 7.02
+- **corrotina / `await`**: função pausável (`async def`) / ponto onde cede o controle ao laço · 7.03
+- **laço de eventos (*event loop*)**: agendador cooperativo que alterna corrotinas · 7.03
+- **`TaskGroup` / `Semaphore`**: grupo de tarefas com escopo / limite de concorrência · 7.03
+- **`httpx`**: cliente HTTP síncrono e assíncrono · 7.04
+- **timeouts (connect/read/write/pool)**: limites de tempo de uma chamada HTTP · 7.04
+- **backoff exponencial / jitter**: esperas crescentes / aleatoriedade para não repetir todos juntos · 7.04
+- **circuit breaker (disjuntor)**: para de chamar um serviço doente por um tempo · 7.04
+- **WSGI / ASGI**: interfaces servidor↔aplicação, síncrona / assíncrona (com WebSocket) · 7.05
+- **Gunicorn / Uvicorn / Nginx**: gerenciador de processos WSGI / servidor ASGI / proxy reverso · 7.05
+- **load shedding**: recusar o excedente (503) para preservar quem já é atendido · 7.05
+- **broker / worker / tarefa**: guarda mensagens / executa / função em segundo plano (Celery) · 7.06
+- **`transaction.on_commit`**: executa a ação só depois do commit · 7.06
+- **at-least-once**: entrega pelo menos uma vez (pode duplicar) · 7.06/7.07
+- **idempotência (consumidor idempotente)**: repetir não muda o resultado · 7.07
+- **reclamo (*claim/lease*)**: direito exclusivo, com prazo, de processar uma mensagem · 7.07
+- **fila de mortos (DLQ)**: destino de mensagens que esgotaram as tentativas · 7.07/7.10
+- **beat / cron / crontab**: agendador do Celery / expressão de 5 campos / sua forma em Python · 7.08
+- **tarefa "de nível" (*level-triggered*)**: processa tudo o que está atrasado, não só o último intervalo · 7.08
+- **webhook**: o provedor chama uma URL sua quando algo acontece · 7.09
+- **assinatura HMAC / anti-replay**: prova autoria e integridade / timestamp com tolerância · 7.09
+- **exchange / binding / routing key**: roteador / regra de ligação / chave de roteamento (RabbitMQ) · 7.10
+- **`ack` / `prefetch`**: confirmação de processamento / limite de mensagens não confirmadas · 7.10
+- **SQS (visibility timeout)**: fila gerenciada da AWS; mensagem invisível até ser apagada · 7.10
+- **outbox transacional**: evento gravado na mesma transação do estado e publicado depois · 7.10
+- **escrita dupla (*dual write*)**: gravar em dois sistemas sem transação comum · 7.10
+- **WebSocket / SSE**: canal bidirecional persistente / fluxo só do servidor · 7.10
+- **channel layer**: correio entre processos do Django Channels (Redis) · 7.10
+
+## Módulo 8
+- **camadas (interface / serviços / dados)**: separação por responsabilidade; a dependência aponta para baixo · 8.01
+- **regra de dependência**: o núcleo não conhece detalhes de fora (DRF, ORM, rede) · 8.01
+- **service / selector / repository**: caso de uso que muda estado / consulta de leitura / acesso a dados atrás de uma interface · 8.02
+- **unidade de trabalho (*unit of work*)**: operações que sucedem ou falham juntas (`repo.transacao()`) · 8.02
+- **porta e adaptador (*port/adapter*)**: interface definida pelo núcleo / implementação que traduz para uma tecnologia · 8.02/8.04
+- **`typing.Protocol`**: interface por estrutura ("tipagem de pato"), verificada pelo `mypy` · 8.03
+- **SOLID**: cinco princípios de projeto (SRP, OCP, LSP, ISP, DIP) · 8.03
+- **DRY / KISS / YAGNI**: não duplicar *conhecimento* / manter simples / não construir o que ninguém pediu · 8.03
+- **teste de contrato**: as mesmas asserções rodando contra todas as implementações de uma porta · 8.03/8.04
+- **Strategy / Factory / Adapter**: variantes intercambiáveis / escolher quem criar / traduzir uma interface externa · 8.04
+- **monolito modular**: uma unidade de deploy com fronteiras impostas por ferramenta · 8.05
+- **ADR (*architecture decision record*)**: registro curto de uma decisão (contexto, decisão, alternativas, consequências) · 8.05
+- **`import-linter`**: ferramenta que falha o CI quando um import viola um contrato de arquitetura · 8.05
+- **twelve-factor app**: doze práticas para apps de nuvem (config no ambiente, logs em stdout, paridade…) · 8.06
+- **falhar cedo (*fail fast*)**: recusar subir com configuração ausente em vez de usar um padrão perigoso · 8.06
+- **`SIGTERM` gracioso**: encerrar terminando o que está em andamento · 8.06
+- **teste de caracterização (*golden master*)**: grava o comportamento atual para refatorar com segurança · 8.07
+- **teste de mutação (manual)**: estragar uma regra de propósito para ver se a rede de testes quebra · 8.07
+- **Strangler Fig**: substituir o legado aos poucos, com o novo crescendo ao redor · 8.07
+- **injeção de SQL**: entrada do usuário interpretada como SQL; evita-se com consultas parametrizadas · 8.07
+
+## Módulo 9
+- **OWASP Top 10**: lista de conscientização dos riscos mais críticos em aplicações web (edição vigente: 2025) · 9.01
+- **modelagem de ameaças / STRIDE**: desenhar fluxos e fronteiras de confiança e listar o que pode dar errado (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) · 9.01
+- **fronteira de confiança**: ponto em que muda o nível de confiança nos dados · 9.01
+- **SQL injection / consulta parametrizada**: dado do usuário lido como comando / comando e valores enviados em separado · 9.02
+- **XSS (*cross-site scripting*)**: script do atacante executando na página; defende-se com escape de saída · 9.02
+- **CSP (*Content-Security-Policy*)**: política que limita de onde a página carrega recursos · 9.02/9.06
+- **CSRF**: ação provocada por outro site aproveitando o cookie enviado automaticamente · 9.03
+- **CORS**: regra do navegador sobre quem pode ler respostas entre origens (não é autenticação) · 9.03
+- **`Secure` / `HttpOnly` / `SameSite`**: atributos de cookie (só HTTPS / invisível ao JS / limita envio entre sites) · 9.03
+- **hash de senha / salt / Argon2id**: derivação lenta e salgada para guardar senhas / valor aleatório por usuário / algoritmo recomendado · 9.04
+- **enumeração de usuários**: descobrir quais contas existem por mensagem ou tempo · 9.04
+- **autenticação / autorização**: provar quem é / decidir o que pode fazer · 9.04
+- **IDOR / BOLA**: acessar objeto alheio trocando o identificador · 9.05
+- **menor privilégio**: dar só o acesso necessário · 9.05/9.07
+- **mass assignment**: cliente grava campos que só o servidor devia controlar · 9.05
+- **mutação (teste)**: estragar a proteção de propósito para ver o teste falhar · 9.05
+- **cadeia de suprimentos de software**: risco das dependências e do build · 9.06
+- **`pip-audit` / `detect-secrets`**: auditoria de dependências / varredura de segredos · 9.06
+- ***log injection***: entrada do usuário que forja linhas de log · 9.06
+- **HSTS**: instrui o navegador a usar só HTTPS por um tempo · 9.06
+- **TLS / certificado / CA / SAN**: protocolo de transporte seguro / liga nome a chave pública / autoridade que assina / nomes válidos do certificado · 9.07
+- **terminação de TLS**: o proxy fala TLS e encaminha HTTP internamente · 9.07
+- **LGPD / titular / controlador**: Lei 13.709/2018 / pessoa a quem os dados se referem / quem decide sobre o tratamento · 9.07
+- **base legal**: fundamento que permite tratar dados (consentimento, obrigação legal, contrato, legítimo interesse…) · 9.07
+- **anonimização × pseudonimização**: impede identificar a pessoa / ainda permite, com informação adicional · 9.07
+
+## Módulo 10
+- **pirâmide de testes**: muitos testes de unidade, alguns de integração, poucos de ponta a ponta · 10.01
+- **fixture / fábrica**: preparação reutilizável de um teste / fixture que devolve uma função para criar objetos · 10.01
+- **`conftest.py`**: arquivo do pytest com fixtures e ganchos compartilhados · 10.01
+- **teste independente (ordem aleatória)**: passa em qualquer ordem; `pytest-randomly` · 10.01
+- **`parametrize`**: um teste, vários casos de entrada e saída · 10.02
+- **stub / mock / spy / fake / dummy**: respostas prontas / grava chamadas / executa o real e grava / implementação funcional simplificada / só preenche parâmetro · 10.02
+- **`autospec`**: dublê que copia a assinatura do objeto real · 10.02
+- **teste de estado × de interação**: verifica o resultado / verifica as chamadas · 10.02
+- **cobertura de linhas × de ramos**: linha executou / decisão exercitada nos dois sentidos · 10.03
+- **teste de mutação**: alterar o código de propósito para ver se algum teste falha · 10.03
+- **TDD**: vermelho → verde → refatorar, em ciclos curtos · 10.04
+- **triangulação**: segundo exemplo que força a implementação real · 10.04
+- **teste de propriedade**: vale para qualquer entrada válida · 10.04
+- **linter / formatador / verificador de tipos**: aponta problemas / padroniza a aparência / confere tipos sem rodar · 10.05
+- **`pre-commit` / hook**: roda verificações antes do commit · 10.05
+- **`.git-blame-ignore-revs`**: lista de commits (formatação) que o `git blame` ignora · 10.05
+- **Conventional Commits**: padrão `tipo(escopo): descrição`, base de versão e changelog · 10.06
+- **revisão de código**: segunda leitura do PR; comentários bloqueantes, sugestões, dúvidas e nits · 10.06
+- **história de usuário / critérios de aceitação (Dado-Quando-Então)**: necessidade em uma frase / condições testáveis · 10.07
+- **Definição de Pronto (DoD)**: acordo do que significa "terminado" · 10.07
+- **Scrum / Kanban / WIP / XP**: ciclos (Sprints) e eventos / fluxo visual / limite de trabalho em andamento / práticas de engenharia · 10.07
+- **alucinação (IA)**: resposta plausível e inventada (função, parâmetro, pacote) · 10.07
+
+## Módulo 11
+- **container**: processo isolado do host (namespaces) e limitado (cgroups), iniciado a partir de uma imagem · 11.01
+- **image / imagem**: pacote imutável, em camadas somente leitura, que descreve um sistema de arquivos e como iniciar · 11.01
+- **layer / camada**: resultado de uma instrução do Dockerfile, identificada por hash e compartilhada entre imagens · 11.01
+- **registry / registro**: servidor de imagens (Docker Hub, GHCR, ECR) · 11.01
+- **tag / digest**: nome mutável de uma versão (`python:3.13-slim`) / hash imutável do conteúdo (`sha256:…`) · 11.01
+- **namespace (Linux)**: isola o que o processo enxerga (PID, rede, montagens) · 11.01
+- **cgroup**: limita e contabiliza CPU, memória e I/O de um grupo de processos · 11.01
+- **Dockerfile**: receita que descreve como construir uma imagem · 11.02
+- **build context / contexto de build**: pasta enviada ao Docker no `docker build`; só o que está nela pode ser copiado · 11.02/11.05
+- **layer cache / cache de camadas**: reaproveitamento de camadas cuja entrada não mudou; uma mudança invalida as camadas seguintes · 11.02
+- **multi-stage build**: vários `FROM`; a imagem final copia só o necessário das etapas anteriores · 11.02
+- **slim**: variante enxuta de uma imagem-base (`python:3.13-slim`) · 11.02
+- **exec form / shell form**: `CMD ["a"]` (o programa é o PID 1 e recebe sinais) / `CMD a` (passa por `/bin/sh -c`) · 11.02
+- **PID 1 / SIGTERM / SIGKILL (137)**: primeiro processo do container, que recebe o `docker stop`; sinal de parada suave / morte imediata (128 + 9) · 11.02
+- **Docker Compose**: descreve e roda aplicações de vários containers a partir de um YAML · 11.03
+- **service (Compose)**: um papel da aplicação (web, db, redis, worker), com seu(s) container(s) · 11.03
+- **healthcheck**: comando que o Docker roda dentro do container para saber se o serviço funciona (`healthy`/`unhealthy`) · 11.03/11.05
+- **`depends_on` com `condition`**: `service_started`, `service_healthy`, `service_completed_successfully` · 11.03
+- **tarefa única (one-off)**: serviço que roda e termina (migração, seed); `docker compose run --rm` · 11.03
+- **volume nomeado / anônimo**: armazenamento persistente gerenciado pelo Docker, com / sem nome · 11.04
+- **bind mount**: pasta do host montada no container (código em desenvolvimento) · 11.04
+- **UID / GID**: dono numérico de arquivos; define se o processo do container pode escrever num volume · 11.04
+- **rede do Compose / DNS interno**: redes isolam serviços; o nome do serviço resolve dentro da rede · 11.04
+- **`env_file` / interpolação (`${VAR:?msg}`)**: variáveis entregues ao container / valores substituídos no YAML · 11.03/11.04
+- **secret (Compose) / `NOME_FILE`**: segredo montado como arquivo em `/run/secrets` / convenção de ler o valor de um arquivo · 11.04
+- **`.dockerignore`**: lista o que não vai no contexto de build (`.git`, `.env`, `.venv`) · 11.05
+- **crash loop**: processo que falha ao iniciar e é recriado repetidamente (`RestartCount` crescente) · 11.05
+- **OOM kill**: o kernel mata o processo que passou do limite de memória (`OOMKilled=true`, código 137) · 11.05
+- **Gunicorn / worker**: servidor WSGI de produção / processo que atende requisições · 11.06
+- **Uvicorn**: servidor ASGI (laço de eventos), necessário para WebSocket · 11.06
+- **reverse proxy / proxy reverso (Nginx)**: servidor na frente da aplicação: TLS, estáticos, limites · 11.06
+- **`X-Forwarded-For` / `X-Forwarded-Proto`**: cabeçalhos com o IP e o protocolo originais do cliente, postos pelo proxy · 11.06
+- **502 / 504**: o proxy recebeu resposta inválida / não recebeu resposta a tempo do upstream · 11.06
+- **graceful reload (`SIGHUP`)**: troca os workers sem derrubar requisições em andamento · 11.06
+
+
+## Módulo 12
+- **CI (integração contínua)**: integrar com frequência na linha principal, validando cada integração com um build automatizado · 12.01
+- **entrega contínua / implantação contínua**: software sempre pronto para publicar (com aprovação) / publicado sozinho quando passa · 12.01
+- **workflow / job / step / runner / action**: arquivo YAML do GitHub Actions / conjunto de passos num runner limpo / passo (`run` ou `uses`) / máquina que executa / passo reutilizável versionado · 12.01
+- **evento (`on:`)**: gatilho do workflow (`pull_request`, `push`, tag, `workflow_dispatch`) · 12.01
+- **matriz (`strategy.matrix`)**: repete um job variando parâmetros · 12.01/12.02
+- **`GITHUB_TOKEN` / `permissions`**: token temporário do workflow / permissões mínimas que ele recebe · 12.01
+- **fixar action por SHA**: referenciar o commit imutável em vez de uma tag móvel · 12.01
+- **actionlint**: validador estático de workflows (sintaxe, expressões, shellcheck) · 12.01
+- **`concurrency`**: evita/ cancela execuções simultâneas do mesmo grupo · 12.01
+- **service container**: container auxiliar (ex.: PostgreSQL) subido ao lado do job · 12.02
+- **GHCR**: registro de imagens do GitHub (`ghcr.io`) · 12.02
+- **environment (GitHub)**: ambiente nomeado com segredos e regras (revisores) · 12.02
+- **rolling / blue-green / canary / feature flag**: estratégias de implantação · 12.02
+- **rollback**: voltar à versão anterior (reimplantar a imagem anterior) · 12.02
+- **expandir e contrair (expand/contract)**: migrações em etapas compatíveis com a versão anterior · 12.02
+- **Dependabot**: PRs automáticos de atualização de dependências, actions e imagens · 12.02
+- **proteção de branch**: exige PR e checks verdes para integrar na `main` · 12.02
+
+## Módulo 13
+- **IaaS / PaaS / SaaS**: infraestrutura / plataforma / software como serviço (EC2 / RDS / Gmail) · 13.01
+- **região / zona de disponibilidade (AZ)**: área geográfica / data center isolado dentro dela · 13.01
+- **responsabilidade compartilhada**: o provedor protege a nuvem; o cliente protege o que coloca nela · 13.01
+- **usuário raiz / MFA**: dono da conta (guardar, não usar) / segundo fator de autenticação · 13.01
+- **AWS Budgets / Cost Anomaly Detection**: orçamento com alertas / detecção de gasto fora do padrão · 13.01
+- **Free account plan (AWS)**: plano gratuito por tempo/crédito limitado, sem acesso a todos os serviços (ver a documentação do dia) · 13.01
+- **lock-in**: dependência de serviços proprietários que encarece a saída · 13.02
+- **IAM / usuário / grupo / papel / política**: identidades e permissões da AWS · 13.03
+- **instance profile**: liga um papel IAM a uma EC2 · 13.03
+- **ARN**: identificador único de um recurso AWS · 13.03
+- **menor privilégio**: conceder só as ações e os recursos necessários · 13.03
+- **STS / credenciais temporárias**: serviço que emite credenciais com prazo · 13.03
+- **cadeia de credenciais (boto3)**: ordem em que o SDK procura credenciais · 13.03
+- **OIDC (GitHub → AWS)**: token efêmero trocado por credenciais temporárias, sem chave guardada · 13.03/13.07
+- **EC2 / AMI / EBS / user data**: máquina virtual / imagem do sistema / disco / script do primeiro boot · 13.04
+- **Security Group**: firewall com estado, só permite; aceita outro SG como origem · 13.04
+- **VPC / sub-rede**: rede privada da conta / fatia dela em uma AZ · 13.04
+- **IP elástico**: IP público fixo; cobrado se estiver solto · 13.04
+- **IMDSv2**: metadados da instância com token (barra SSRF) · 13.04
+- **Session Manager (SSM)**: shell e comandos sem SSH, por IAM · 13.04
+- **RDS / Multi-AZ / snapshot / PITR**: banco gerenciado / réplica em outra AZ / cópia do disco / recuperação para um ponto no tempo · 13.05
+- **sslmode**: modo de TLS do PostgreSQL (`require`, `verify-full`) · 13.05
+- **S3 / bucket / objeto / chave**: armazenamento de objetos / contêiner / arquivo / nome dele · 13.06
+- **Block Public Access**: impede tornar objetos públicos · 13.06
+- **URL pré-assinada / SigV4**: URL com permissão temporária / esquema atual de assinatura · 13.06
+- **django-storages**: backends de armazenamento (S3 etc.) para o Django · 13.06
+- **ECR**: registro de imagens da AWS · 13.07
+- **Fargate / App Runner / Lightsail**: contêineres sem servidores / app gerenciado / VPS de preço fixo · 13.07
+- **Parameter Store / Secrets Manager**: configuração e segredos simples / segredos com rotação · 13.08
+- **CloudWatch Logs (grupo, retenção)**: logs centralizados e quanto tempo ficam · 13.08
+- **moto**: simulador de AWS em Python (não aplica IAM nem cobra) · 13.01/13.08
+- **tag de custo (Project=…)**: etiqueta que permite achar e apagar tudo de um projeto · 13.08
+
+## Módulo 14
+- **log estruturado**: um evento por linha em formato fixo (JSON), com campos consultáveis · 14.01
+- **request_id / ID de correlação**: identificador que liga todos os logs de uma requisição (Nginx → Django) · 14.01
+- **contextvars**: variáveis ligadas ao contexto atual (requisição/tarefa), usadas para o `request_id` · 14.01
+- **redação (redaction)**: trocar valores sensíveis por `[REDACTED]` antes de logar · 14.01
+- **liveness / readiness**: "o processo está vivo?" (reiniciar se falha) / "consegue atender?" (sai da rotação se falha) · 14.01
+- **Sentry / release / environment**: monitoramento de erros agrupados / versão que causou o erro / produção × homologação · 14.02
+- **before_send / data_collection**: filtro do evento antes do envio / controle do que o SDK coleta · 14.02
+- **métrica (counter, gauge, histogram)**: série numérica: só cresce / sobe e desce / distribuição em baldes · 14.02
+- **cardinalidade**: número de séries distintas criadas pelos rótulos; deve ser baixa · 14.02
+- **RED / quatro sinais de ouro**: Rate, Errors, Duration (+ saturação) · 14.02
+- **modo multiprocesso (Prometheus)**: agregar contadores de vários workers por arquivos em pasta · 14.02
+- **cache-aside / TTL / hit / miss**: a aplicação consulta e preenche o cache / validade / acerto / falha · 14.03
+- **invalidação por versão**: contador na chave; incrementá-lo torna as chaves antigas inalcançáveis · 14.03
+- **falha aberta / fechada (fail-open/closed)**: seguir sem o recurso / recusar quando ele falta · 14.03
+- **stampede (debandada)**: muitos misses simultâneos recalculando a mesma chave · 14.03
+- **maxmemory / allkeys-lru**: limite de memória do Redis e política de remoção · 14.03
+- **pg_stat_statements / log de lentas**: estatísticas por consulta / registro das que passam de um limite · 14.04
+- **EXPLAIN (ANALYZE)**: plano de execução real com tempos · 14.04
+- **OFFSET × keyset (cursor)**: paginação que descarta N linhas × que salta pelo índice · 14.04
+- **pg_trgm / GIN**: índice de trigramas para `LIKE '%x%'` (PostgreSQL) · 14.04
+- **RPO / RTO**: dado que se aceita perder / tempo para voltar ao ar · 14.04
+- **regra 3-2-1**: 3 cópias, 2 mídias, 1 fora do local · 14.04
+- **teste de restauração**: restaurar um backup em ambiente temporário e conferir/medir · 14.04
+- **FastAPI**: framework web ASGI que usa anotações de tipo para validar, converter e documentar · 15.01
+- **Starlette**: toolkit ASGI sobre o qual o FastAPI é construído · 15.01
+- **Pydantic**: biblioteca de validação/serialização por tipos (v2, núcleo em Rust) · 15.01
+- **`BaseModel` / `Field`**: classe de modelo e restrições de campo do Pydantic · 15.01
+- **`field_validator` / `model_validator`**: regra de um campo / regra entre campos · 15.01
+- **`computed_field`**: campo calculado que entra no JSON e no OpenAPI · 15.01
+- **`from_attributes`**: permite criar o modelo a partir de atributos de um objeto (ORM) · 15.01
+- **422 (Unprocessable Content)**: corpo bem formado, porém inválido; o erro padrão de validação do FastAPI · 15.01
+- **`loc` / `type` / `msg` / `input`**: onde, qual código, texto e valor recebido num erro de validação · 15.01
+- **SQLAlchemy**: ORM/toolkit SQL de Python, independente de framework · 15.02
+- **`Mapped` / `mapped_column`**: mapeamento declarativo tipado do SQLAlchemy 2 · 15.02
+- **Engine / Session / `AsyncSession`**: fábrica de conexões / unidade de trabalho / versão com `await` · 15.02
+- **lazy loading × `joinedload` / `contains_eager` / `selectinload`**: estratégias de carregar relacionados · 15.02
+- **`MissingGreenlet`**: erro ao fazer E/S "escondida" (lazy load) em contexto async · 15.02
+- **Alembic**: ferramenta de migrações do SQLAlchemy (`revision --autogenerate`, `upgrade`, `downgrade`, `check`) · 15.02
+- **`alembic_version`**: tabela que guarda a revisão atual do banco · 15.02
+- **expandir e contrair**: migrar uma coluna em etapas compatíveis com o código antigo e o novo · 15.02
+- **laço de eventos (event loop)**: o "garçom único" que alterna tarefas async · 15.03
+- **`async def` × `def` (FastAPI)**: roda no laço × roda numa thread do pool (40 por padrão) · 15.03
+- **`Depends` / dependência com `yield`**: injeção resolvida por requisição, com setup/teardown · 15.03
+- **`dependency_overrides`**: troca uma dependência nos testes · 15.03
+- **OpenAPI / Swagger UI / ReDoc**: contrato gerado e telas `/docs` e `/redoc` · 15.03
+- **`HTTPBearer`**: esquema de segurança de token no cabeçalho `Authorization` · 15.03
+- **`pytest-asyncio` (modo `auto`)**: executa testes e fixtures `async` · 15.04
+- **`ASGITransport` / `MockTransport`**: chama o app sem rede / simula o servidor externo · 15.04
+- **`StaticPool`**: uma conexão compartilhada (SQLite em memória nos testes) · 15.04
+- **`lifespan`**: eventos de startup/shutdown do app ASGI (não rodam no `ASGITransport`) · 15.04
+- **`asyncio.gather`**: roda corrotinas independentes juntas; tempo ≈ o da mais lenta · 15.04
+- **teste de contrato (entre APIs)**: mesmas requisições em duas implementações e comparação das respostas · 15.05
+- **`Page[T]`**: envelope de paginação genérico (`count/next/previous/results`) · 15.05
+- **Lei de Amdahl (aplicada)**: acelerar a parte rápida pouco melhora o total · 15.06
+- **ADR**: registro curto de uma decisão de arquitetura · 15.06
+- **README bilíngue**: `README.md` (PT) e `README.en.md` com link cruzado · 16.01
+- **bullet com prova**: verbo + o quê + tecnologia + resultado verificável · 16.02
+- **`NOT EXISTS`**: forma segura de "não existe correspondente" (imune ao `NULL` do `NOT IN`) · 16.04
+- **idempotência**: repetir a operação tem o mesmo efeito · 16.04
+- **`reflog`**: diário local dos movimentos do `HEAD`, para recuperar commits · 16.04
+- **janela deslizante**: técnica de percorrer um trecho contínuo ajustando suas pontas · 16.05
+- **take-home**: desafio técnico feito em casa com prazo · 16.06
+- **`BEGIN IMMEDIATE`**: transação SQLite que pega logo a trava de escrita · 16.07

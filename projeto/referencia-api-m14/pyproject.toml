@@ -1,0 +1,129 @@
+[project]
+name = "lab"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "argon2-cffi>=25.1.0",
+    "bcrypt>=5.0.0",
+    "celery>=5.7.0",
+    "channels>=4.3.2",
+    "channels-redis>=4.3.0",
+    "django>=5.2,<5.3",
+    "django-cors-headers>=4.9,<4.10",
+    "django-filter>=26.2",
+    "django-storages[s3]>=1.14",
+    "djangorestframework>=3.18,<3.19",
+    "djangorestframework-simplejwt>=5.5,<5.6",
+    "drf-spectacular>=0.30,<0.31",
+    "graphql-core>=3.3.2",
+    "grpcio>=1.85.1",
+    "grpcio-tools>=1.85.1",
+    "gunicorn>=26.2.0",
+    "httpx>=0.28.1",
+    "pika>=1.4.4",
+    "pillow>=13.0.0",
+    "prometheus-client>=0.21",
+    "psycopg[binary]>=3.3.8",
+    "pytest>=9.2.0",
+    "pytest-django>=4.14.0",
+    "redis>=8.1.0",
+    "sentry-sdk>=2.20",
+    "uvicorn>=0.54.0",
+    "websockets>=17.4",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "celery-types>=0.26.0",
+    "commitizen>=4.19.3",
+    "daphne>=4.2.3",
+    "detect-secrets>=1.5.0",
+    "django-stubs>=6.1.2",
+    "djangorestframework-stubs>=3.18.2",
+    "import-linter>=2.16",
+    "moto[budgets,ec2,iam,logs,rds,s3,secretsmanager,server,ssm,sts]>=5",
+    "mypy>=2.4.1",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.7.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "pytest-cov>=7.1.0",
+    "pytest-env>=1.8.5",
+    "pytest-randomly>=5.0.0",
+    "pytest-xdist>=3.8.0",
+    "radon>=6.0.1",
+    "ruff>=0.17.4",
+    "types-channels>=4.3.0.20260518",
+    "types-django-filter>=26.2.0.20261107",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["apps", "config", "legado"]
+omit = [
+    "*/migrations/*",
+    "apps/catalog/estilos.py",        # arquivo DIDÁTICO da aula 6.04 (4 estilos de view); não tem rota
+    "apps/orders/email_backend.py",   # SMTP SIMULADO do laboratório (aula 7.06)
+    "config/views_demo.py",           # rotas de experimento da série (só em DEBUG)
+]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+line-length = 140                       # o estilo do projeto usa linhas longas com comentários; 140 evita reformatar tudo sem ganho
+target-version = "py313"
+force-exclude = true                    # respeita o exclude MESMO quando o pre-commit passa os arquivos um a um
+extend-exclude = ["migrations", ".venv", "grpc_demo/*_pb2.py", "grpc_demo/*_pb2_grpc.py", "scripts/m10"]   # código GERADO e material DIDÁTICO (inclui uma sugestão de IA ruim, de propósito) não se lint-am
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "C4", "PIE", "RUF", "S", "DJ", "C90"]
+ignore = [
+    "RUF001", "RUF002", "RUF003",       # caracteres "ambíguos" (×, –, ’) são texto legítimo em português
+    "RUF012",                           # atributos de classe do Django/DRF (permission_classes, fields...) são configuração lida pelo framework
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10                     # a mesma régua da aula 8.03
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "S311", "S603", "S108", "RUF012", "B017"]   # assert, senhas de teste, semente fixa, subprocess
+"seclab/**" = ["S608"]                  # anti-padrão proposital (aula 9.02)
+"scripts/**" = ["S603", "S607", "S311"]
+"scripts/m11/**" = ["S310"]            # scripts de laboratório: a URL vem da linha de comando (o aluno, não um terceiro)
+"conftest.py" = ["S101"]               # asserts em fixtures de apoio
+"config/settings*.py" = ["F403", "F405"]   # `from .settings import *` é o padrão de configurações por ambiente
+
+[tool.mypy]
+python_version = "3.13"
+plugins = ["mypy_django_plugin.main", "mypy_drf_plugin.main"]
+files = ["apps", "config", "legado"]
+exclude = ["migrations", "tests"]
+check_untyped_defs = true           # confere o CORPO de funções sem anotação também
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+
+[tool.django-stubs]
+django_settings_module = "config.settings_test"
+
+[[tool.mypy.overrides]]
+module = ["pika", "pika.*"]
+ignore_missing_imports = true           # o pika não publica tipos nem pacote de stubs
+
+[[tool.mypy.overrides]]
+# Módulos PUROS e de regra de negócio: tipagem estrita (nenhuma função sem anotação, nada de Any implícito)
+module = ["apps.orders.domain", "apps.orders.cupons", "apps.orders.selectors", "legado.precificacao"]
+# `strict = true` só existe no nível global; por módulo é preciso listar as opções:
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_any_generics = true
+warn_return_any = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_provider = "scm"                # a versão vem da última tag do Git (não duplicamos em um arquivo)
+tag_format = "v$version"
+update_changelog_on_bump = true
+major_version_zero = true               # até a 1.0.0, 'feat!' sobe o MINOR (convenção de pré-1.0)

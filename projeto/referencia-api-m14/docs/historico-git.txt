@@ -1,0 +1,21 @@
+* dc70901 (HEAD -> main, tag: v2.4-qualidade, docs/uso-de-ia) docs: regras de uso responsável de IA no projeto
+* b253e3c (docs/historia-do-cupom) docs: história do cupom com critérios de aceitação executáveis e definição de pronto automatizada
+* d0082a1 (docs/colaboracao) docs: README, CONTRIBUTING, modelo de PR e guia de code review
+*   3151477 feat(orders): exporta os pedidos do usuário em CSV (#12)
+|\  
+| * 3efb542 (feat/exportar-pedidos) perf(orders): carrega o usuário com select_related e lê os pedidos em blocos
+| * 7531ecd fix(security): neutraliza fórmulas de planilha nas células de texto do CSV
+| * d519f4f fix(orders): limita a exportação aos pedidos do usuário autenticado
+| * deeee95 test(orders): testes do revisor para a exportação (acesso, fórmulas e consultas)
+| * 5059f3b fix(orders): aceita o parâmetro de versão e documenta o CSV no schema
+| * bdb1baa feat(orders): exporta os pedidos em CSV
+|/  
+* 9f11596 build: valida a mensagem de commit com commitizen (Conventional Commits)
+* 681347c fix(ruff): force-exclude para o pre-commit respeitar migrações e código gerado
+* b427de1 build: pre-commit com ruff, mypy e detecção de segredos
+* 1e75f42 feat(types): mypy com django-stubs (estrito nos módulos puros) e correção do bug de 'hoje' nos cupons
+* b7e66b3 refactor: corrige avisos do ruff (__str__ nos modelos, nomes claros, imports no topo)
+* 226f642 style: ruff --fix (imports ordenados e removidos os não usados)
+* f4502e9 chore: .git-blame-ignore-revs para o commit de formatação
+* c5ae121 style: ruff format (somente formatação)
+* 5c42cad (tag: v0.9.0) chore: baseline do módulo 9 (235 testes)

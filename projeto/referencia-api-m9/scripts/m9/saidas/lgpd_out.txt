@@ -1,0 +1,39 @@
+$ manage.py exportar_dados_titular cliente
+{
+  "gerado_em": "2026-11-08T22:49:59.898120+00:00",
+  "conta": {
+    "usuario": "cliente",
+    "email": "cliente@minishop.local",
+    "nome": "Maria Souza",
+    "cadastrado_em": "2026-11-08T22:49:59.058204+00:00",
+    "ultimo_acesso": null
+  },
+  "pedidos": [
+    {
+      "id": 1,
+      "status": "pending",
+      "total": "1402.40",
+      "criado_em": "2026-11-08T22:49:59.466788+00:00",
+      "itens": [
+        {
+          "sku": "CAS-049",
+          "produto": "Cadeira Básico",
+          "quantidade": 2,
+          "preco_unitario": "701.20"
+        }
+      ],
+      "pagamento": null
+    }
+  ],
+  "carrinho": [
+    {
+      "sku": "CAS-049",
+      "quantidade": 1
+    }
+  ]
+}
+$ manage.py anonimizar_titular cliente
+(log de segurança) titular_anonimizado user_id=3
+anonimizado
+$ (conferência no banco depois)
+{'username': 'anonimo-3', 'email': '', 'nome': '', 'ativo': False, 'senha_utilizavel': False, 'pedidos_mantidos': 1}

@@ -1,0 +1,43 @@
+[importlinter]
+root_packages =
+    apps
+    config
+include_external_packages = True
+
+[importlinter:contract:camadas-dentro-de-cada-app]
+name = Dentro de cada app: interface → serviços → dados (nunca no sentido contrário)
+type = layers
+layers =
+    api
+    services
+    models
+containers =
+    apps.cart
+    apps.orders
+    apps.payments
+
+[importlinter:contract:servicos-sem-framework-de-interface]
+name = Serviços e modelos não dependem de DRF nem de Channels
+type = forbidden
+source_modules =
+    apps.catalog.models
+    apps.cart.models
+    apps.cart.services
+    apps.orders.models
+    apps.orders.services
+    apps.payments.models
+    apps.payments.services
+forbidden_modules =
+    rest_framework
+    channels
+allow_indirect_imports = True
+
+[importlinter:contract:apps-sem-ciclos]
+name = Apps em camadas, sem dependência circular (quem está em cima pode usar quem está embaixo)
+type = layers
+layers =
+    apps.realtime
+    apps.payments
+    apps.orders
+    apps.cart
+    apps.catalog

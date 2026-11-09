@@ -1,0 +1,4 @@
+
+create_order com repositório EM MEMÓRIA:        4 µs por chamada (500 chamadas)
+create_order com o ORM (SQLite)        :     1346 µs por chamada (100 chamadas, sem contar a preparação)
+→ a versão em memória é ≈ 309× mais rápida (e não precisa de banco, migrações nem fixtures)

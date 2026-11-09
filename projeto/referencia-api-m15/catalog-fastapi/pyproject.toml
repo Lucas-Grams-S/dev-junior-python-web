@@ -1,0 +1,41 @@
+[project]
+name = "catalog-fastapi"
+version = "0.1.0"
+description = "Catálogo do MiniShop em FastAPI + SQLAlchemy 2 + Pydantic 2 (comparativo com Django/DRF, módulo 15)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy[asyncio]",
+    "alembic",
+    "pydantic-settings",
+    "aiosqlite",
+    "asyncpg",
+]
+
+[dependency-groups]
+dev = ["pytest", "pytest-asyncio", "httpx", "ruff", "mypy"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+filterwarnings = ["error"]  # um `await` esquecido vira FALHA (aula 15.04)
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "ASYNC"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+strict = true
+exclude = ["migrations"]

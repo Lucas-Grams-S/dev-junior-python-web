@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniShop</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#catalogo">Ir para o catálogo</a>
+  <header>
+    <h1>MiniShop</h1>
+    <nav aria-label="Conta">
+      <button id="btn-entrar" type="button">Entrar</button>
+      <button id="btn-sair" type="button" hidden>Sair</button>
+      <span>Carrinho: <strong id="contador">0</strong></span>
+    </nav>
+  </header>
+
+  <p id="avisos" role="status" aria-live="polite"></p>
+
+  <div class="layout">
+    <main id="catalogo">
+      <form id="filtros" role="search" aria-label="Filtros do catálogo">
+        <label>Buscar <input id="busca" type="search" placeholder="nome, SKU…"></label>
+        <label>Categoria <select id="categoria"><option value="">Todas</option></select></label>
+        <label>Ordenar
+          <select id="ordem">
+            <option value="">Nome</option>
+            <option value="price">Menor preço</option>
+            <option value="-price">Maior preço</option>
+            <option value="-created_at">Mais novos</option>
+          </select>
+        </label>
+        <button type="submit">Filtrar</button>
+      </form>
+      <p id="resumo" class="suave"></p>
+      <ul id="produtos" class="grade"></ul>
+      <nav class="paginas" aria-label="Paginação">
+        <button id="anterior" type="button" disabled>« Anterior</button>
+        <button id="proxima" type="button" disabled>Próxima »</button>
+      </nav>
+    </main>
+
+    <aside aria-labelledby="titulo-carrinho">
+      <h2 id="titulo-carrinho">Seu carrinho</h2>
+      <ul id="itens"></ul>
+      <p id="total"></p>
+      <button id="finalizar" type="button" disabled>Finalizar compra</button>
+    </aside>
+  </div>
+
+  <dialog id="dlg-login" aria-labelledby="titulo-login">
+    <form id="form-login" method="dialog">
+      <h2 id="titulo-login">Entrar</h2>
+      <label>Usuário <input name="username" autocomplete="username" required></label>
+      <label>Senha <input name="password" type="password" autocomplete="current-password" required></label>
+      <p id="erro-login" role="alert" class="erro"></p>
+      <button type="submit">Entrar</button>
+      <button type="button" id="cancelar-login">Cancelar</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

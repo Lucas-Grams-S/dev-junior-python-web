@@ -1,0 +1,19 @@
+== 1) Cliente SEM confiar na CA do laboratório (verificação normal do certificado):
+   código de saída do curl: 60 (60 = certificado não verificável)
+   curl: (60) SSL certificate OpenSSL verify result: unable to get local issuer certificate (20)
+== 2) Cliente que confia na CA (--cacert), com o nome certo (localhost):
+HTTP/1.1 200 OK
+Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
+Strict-Transport-Security: max-age=3600
+== 3) Nome errado: o certificado só vale para localhost e 127.0.0.1 (peço o nome outro.exemplo apontando para o mesmo servidor):
+curl: (60) SSL: no alternative certificate subject name matches target hostname 'outro.exemplo'
+== 4) Versões do TLS (cliente com nível de segurança rebaixado SÓ para este teste):
+   TLS 1.0: recusado pelo servidor ([SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl)
+   TLS 1.1: recusado pelo servidor ([SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl)
+   TLS 1.2: ACEITO pelo servidor (TLSv1.2, ECDHE-RSA-AES256-GCM-SHA384)
+   TLS 1.3: ACEITO pelo servidor (TLSv1.3, TLS_AES_256_GCM_SHA384)
+== 5) HTTP puro com SECURE_SSL_REDIRECT=1 (porta 8165):
+HTTP/1.1 301 Moved Permanently
+Location: https://127.0.0.1:8165/api/v1/categories/
+== 6) O mesmo servidor exposto DIRETO, com um cabeçalho X-Forwarded-Proto forjado pelo cliente:
+HTTP/1.1 200 OK

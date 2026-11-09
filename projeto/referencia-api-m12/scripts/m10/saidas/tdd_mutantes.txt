@@ -1,0 +1,5 @@
+vence no último dia (> vira >=)               → FAILED test_no_ultimo_dia_de_validade_ainda_vale 1 failed, 10 passed in 0.05s 
+mínimo exclusivo (< vira <=)                  → FAILED test_subtotal_exatamente_no_minimo_vale 1 failed, 10 passed in 0.06s 
+min vira max                                   → FAILED test_cupom_percentual[10pct-de-200] FAILED test_cupom_percentual[15pct-de-80] FAILED test_cupom_de_valor_fixo FAILED test_desconto_nunca_passa_do_subtotal FAILED test_no_ultimo_dia_de_validade_ainda_vale FAILED test_subtotal_exatamente_no_minimo_vale FAILED test_arredonda_meio_centavo_para_cima FAILED test_propriedade_desconto_entre_zero_e_subtotal 8 failed, 3 passed in 0.06s 
+percentual divide por 10 em vez de 100         → FAILED test_cupom_percentual[10pct-de-200] FAILED test_cupom_percentual[15pct-de-80] FAILED test_no_ultimo_dia_de_validade_ainda_vale FAILED test_subtotal_exatamente_no_minimo_vale FAILED test_arredonda_meio_centavo_para_cima 5 failed, 6 passed in 0.06s 
+arredondamento vira ROUND_DOWN                 → FAILED test_arredonda_meio_centavo_para_cima 1 failed, 10 passed in 0.05s 

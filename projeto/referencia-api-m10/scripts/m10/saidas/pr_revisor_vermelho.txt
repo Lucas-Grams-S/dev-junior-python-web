@@ -1,0 +1,7 @@
+E       AssertionError: assert ({'+cmd', 'cliente'} == {'cliente'}
+E       AssertionError: ['+cmd', '', '+cmd', '', '+cmd', '', ...]
+E       AssertionError: 6 consultas com 3 pedidos, 11 com 8: há consulta por pedido (N+1)
+FAILED tests/test_exportar_pedidos.py::test_o_csv_so_traz_os_pedidos_do_proprio_usuario
+FAILED tests/test_exportar_pedidos.py::test_celulas_de_texto_nao_viram_formulas_na_planilha
+FAILED tests/test_exportar_pedidos.py::test_o_numero_de_consultas_nao_cresce_com_o_numero_de_pedidos
+3 failed, 2 passed in 0.65s

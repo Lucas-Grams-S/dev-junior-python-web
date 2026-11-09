@@ -1,0 +1,3737 @@
+{
+ "barato|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|FRETEGRATIS|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 102.5
+  }
+ },
+ "barato|FRETEGRATIS|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 100.0
+  }
+ },
+ "barato|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|FRETEGRATIS|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 5.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 95.0
+  }
+ },
+ "barato|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|None|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 122.4
+  }
+ },
+ "barato|None|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 119.9
+  }
+ },
+ "barato|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|None|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 5.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 114.9
+  }
+ },
+ "barato|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|PROMO10|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 7.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 112.4
+  }
+ },
+ "barato|PROMO10|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 10.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 109.9
+  }
+ },
+ "barato|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|PROMO10|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 15.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 104.9
+  }
+ },
+ "barato|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|PROMO20|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 7.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 112.4
+  }
+ },
+ "barato|PROMO20|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 10.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 109.9
+  }
+ },
+ "barato|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato|PROMO20|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 15.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 104.9
+  }
+ },
+ "barato|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "barato|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "barato|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "barato|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "barato|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "barato||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato||boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 122.4
+  }
+ },
+ "barato||cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 119.9
+  }
+ },
+ "barato||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "barato||pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 9,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 5.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 114.9
+  }
+ },
+ "caro|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|FRETEGRATIS|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 602.5
+  }
+ },
+ "caro|FRETEGRATIS|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 600.0
+  }
+ },
+ "caro|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|FRETEGRATIS|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 570.0
+  }
+ },
+ "caro|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|None|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 602.5
+  }
+ },
+ "caro|None|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 600.0
+  }
+ },
+ "caro|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|None|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 570.0
+  }
+ },
+ "caro|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|PROMO10|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 57.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 542.5
+  }
+ },
+ "caro|PROMO10|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 60.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 540.0
+  }
+ },
+ "caro|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|PROMO10|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 90.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 510.0
+  }
+ },
+ "caro|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|PROMO20|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 117.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 482.5
+  }
+ },
+ "caro|PROMO20|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 120.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 480.0
+  }
+ },
+ "caro|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro|PROMO20|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 150.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 450.0
+  }
+ },
+ "caro|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "caro|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "caro|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "caro|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "caro|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "caro||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro||boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 602.5
+  }
+ },
+ "caro||cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 600.0
+  }
+ },
+ "caro||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "caro||pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 3,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 570.0
+  }
+ },
+ "inativo|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|FRETEGRATIS|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|FRETEGRATIS|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|FRETEGRATIS|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|None|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|None|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|None|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO10|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO10|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO10|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO20|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO20|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|PROMO20|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo||boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo||cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "inativo||pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto C-OFF inativo",
+   "ok": false
+  }
+ },
+ "limite_frete|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|FRETEGRATIS|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 202.5
+  }
+ },
+ "limite_frete|FRETEGRATIS|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 200.0
+  }
+ },
+ "limite_frete|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|FRETEGRATIS|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 10.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 190.0
+  }
+ },
+ "limite_frete|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|None|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 202.5
+  }
+ },
+ "limite_frete|None|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 200.0
+  }
+ },
+ "limite_frete|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|None|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 10.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 209.9
+  }
+ },
+ "limite_frete|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|PROMO10|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 17.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 202.4
+  }
+ },
+ "limite_frete|PROMO10|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 20.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 199.9
+  }
+ },
+ "limite_frete|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|PROMO10|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 189.9
+  }
+ },
+ "limite_frete|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|PROMO20|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 17.5,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 202.4
+  }
+ },
+ "limite_frete|PROMO20|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 20.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 199.9
+  }
+ },
+ "limite_frete|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete|PROMO20|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 189.9
+  }
+ },
+ "limite_frete|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "limite_frete|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "limite_frete|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "limite_frete|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "limite_frete|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "limite_frete||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete||boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 202.5
+  }
+ },
+ "limite_frete||cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 200.0
+  }
+ },
+ "limite_frete||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "limite_frete||pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 10.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 209.9
+  }
+ },
+ "medio|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|FRETEGRATIS|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 302.5
+  }
+ },
+ "medio|FRETEGRATIS|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 300.0
+  }
+ },
+ "medio|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|FRETEGRATIS|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 15.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 285.0
+  }
+ },
+ "medio|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|None|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 302.5
+  }
+ },
+ "medio|None|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 300.0
+  }
+ },
+ "medio|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|None|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 15.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 285.0
+  }
+ },
+ "medio|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|PROMO10|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 27.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 272.5
+  }
+ },
+ "medio|PROMO10|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 270.0
+  }
+ },
+ "medio|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|PROMO10|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 45.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 255.0
+  }
+ },
+ "medio|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|PROMO20|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 27.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 272.5
+  }
+ },
+ "medio|PROMO20|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 30.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 270.0
+  }
+ },
+ "medio|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio|PROMO20|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 45.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 255.0
+  }
+ },
+ "medio|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "medio|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "medio|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "medio|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "medio|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "medio||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio||boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 302.5
+  }
+ },
+ "medio||cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 300.0
+  }
+ },
+ "medio||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "medio||pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 7,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "desconto": 15.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 285.0
+  }
+ },
+ "misto|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|FRETEGRATIS|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 222.5
+  }
+ },
+ "misto|FRETEGRATIS|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 220.0
+  }
+ },
+ "misto|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|FRETEGRATIS|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 11.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 209.0
+  }
+ },
+ "misto|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|None|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 222.5
+  }
+ },
+ "misto|None|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 220.0
+  }
+ },
+ "misto|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|None|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 11.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 209.0
+  }
+ },
+ "misto|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|PROMO10|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 19.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 200.5
+  }
+ },
+ "misto|PROMO10|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 22.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 217.9
+  }
+ },
+ "misto|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|PROMO10|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 33.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 206.9
+  }
+ },
+ "misto|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|PROMO20|boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 19.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 200.5
+  }
+ },
+ "misto|PROMO20|cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 22.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 217.9
+  }
+ },
+ "misto|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto|PROMO20|pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 33.0,
+   "frete": 19.9,
+   "ok": true,
+   "pedido_id": true,
+   "total": 206.9
+  }
+ },
+ "misto|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "misto|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "misto|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "misto|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "misto|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "cupom invalido",
+   "ok": false
+  }
+ },
+ "misto||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto||boleto": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": -2.5,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 222.5
+  }
+ },
+ "misto||cartao": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 220.0
+  }
+ },
+ "misto||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "forma de pagamento invalida",
+   "ok": false
+  }
+ },
+ "misto||pix": {
+  "contador": 1,
+  "estoque": {
+   "A-100": 8,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 0
+  },
+  "resp": {
+   "desconto": 11.0,
+   "frete": 0,
+   "ok": true,
+   "pedido_id": true,
+   "total": 209.0
+  }
+ },
+ "sem_estoque|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|FRETEGRATIS|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|FRETEGRATIS|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|FRETEGRATIS|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|None|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|None|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|None|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO10|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO10|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO10|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO20|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO20|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|PROMO20|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque||boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque||cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sem_estoque||pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem estoque D-020",
+   "ok": false
+  }
+ },
+ "sku_inexistente|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|FRETEGRATIS|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|FRETEGRATIS|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|FRETEGRATIS|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|None|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|None|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|None|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO10|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO10|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO10|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO20|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO20|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|PROMO20|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente||boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente||cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "sku_inexistente||pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "produto ZZZ nao existe",
+   "ok": false
+  }
+ },
+ "vazio|FRETEGRATIS|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|FRETEGRATIS|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|FRETEGRATIS|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|FRETEGRATIS|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|FRETEGRATIS|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|None|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|None|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|None|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|None|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|None|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO10|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO10|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO10|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO10|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO10|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO20|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO20|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO20|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO20|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|PROMO20|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|XPTO|None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|XPTO|boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|XPTO|cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|XPTO|cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio|XPTO|pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio||None": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio||boleto": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio||cartao": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio||cheque": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ },
+ "vazio||pix": {
+  "contador": 0,
+  "estoque": {
+   "A-100": 10,
+   "B-300": 5,
+   "C-OFF": 5,
+   "D-020": 1
+  },
+  "resp": {
+   "erro": "sem itens",
+   "ok": false
+  }
+ }
+}

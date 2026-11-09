@@ -1,0 +1,18 @@
+== camadas de negócio (limite 80%)
+Name                          Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------
+apps/accounts/lgpd.py            28      0      8      0   100%
+apps/cart/services.py            49      0     18      0   100%
+apps/orders/domain.py            45      0     12      0   100%
+apps/orders/repositories.py      65      0      2      0   100%
+apps/orders/selectors.py          4      0      0      0   100%
+apps/orders/services.py          46      2     12      0    97%   53-54
+apps/orders/tasks.py             82      2      8      0    98%   101-102
+apps/payments/gateway.py         71      2     14      0    98%   77-78
+apps/payments/outbox.py          35      5     10      1    87%   14-18, 38->50
+apps/payments/services.py        41      0     16      0   100%
+legado/precificacao.py           24      0      8      0   100%
+-------------------------------------------------------------------------
+TOTAL                           490     11    108      1    98%
+== projeto inteiro (informativo)
+TOTAL                                                          1415     35    224     17    97%

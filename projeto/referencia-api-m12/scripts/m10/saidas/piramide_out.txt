@@ -1,0 +1,3 @@
+unidade    44 passed, 192 deselected in 1.03s
+integracao 99 passed, 1 skipped, 136 deselected in 4.52s
+api        92 passed, 144 deselected in 4.08s

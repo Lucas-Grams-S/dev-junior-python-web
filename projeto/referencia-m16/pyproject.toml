@@ -1,0 +1,20 @@
+[project]
+name = "modulo16"
+version = "0.1.0"
+description = "Material executável do módulo 16: pegadinhas de Python, lógica de entrevista e dois take-homes resolvidos"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "httpx", "uvicorn"]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "take-home-1", "take-home-2"]
+testpaths = ["entrevista", "take-home-1/tests", "take-home-2/tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint.per-file-ignores]
+"entrevista/python_pegadinhas.py" = ["B023", "PLR0133", "F841", "B006", "F823"]  # os "erros" são o conteúdo didático
+"entrevista/logica.py" = ["SIM102"]

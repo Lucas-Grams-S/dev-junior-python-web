@@ -1,0 +1,6 @@
+apps/orders/zz_erro_de_tipo.py:10: error: Argument 2 to "calcular_desconto" has incompatible type "float"; expected "Decimal"  [arg-type]
+apps/orders/zz_erro_de_tipo.py:11: error: Argument "hoje" to "calcular_desconto" has incompatible type "str"; expected "date | None"  [arg-type]
+apps/orders/zz_erro_de_tipo.py:12: error: List item 0 has incompatible type "int"; expected "LinhaCompra"  [list-item]
+apps/orders/zz_erro_de_tipo.py:12: error: List item 1 has incompatible type "int"; expected "LinhaCompra"  [list-item]
+apps/orders/zz_erro_de_tipo.py:12: error: List item 2 has incompatible type "int"; expected "LinhaCompra"  [list-item]
+Found 5 errors in 1 file (checked 81 source files)

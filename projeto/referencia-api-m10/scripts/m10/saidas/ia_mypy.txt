@@ -1,0 +1,2 @@
+sugestao_ia.py:10: error: Returning Any from function declared to return "float"  [no-any-return]
+Found 1 error in 1 file (checked 1 source file)

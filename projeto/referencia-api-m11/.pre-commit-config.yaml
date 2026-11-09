@@ -1,0 +1,39 @@
+# Hooks LOCAIS: usam as ferramentas e AS VERSÕES travadas no uv.lock (nada é baixado de repositórios de terceiros).
+# Instalar:  uv run pre-commit install --install-hooks && uv run pre-commit install --hook-type commit-msg
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-lint
+        name: ruff (lint)
+        entry: uv run ruff check --fix --exit-non-zero-on-fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff (formatação)
+        entry: uv run ruff format
+        language: system
+        types: [python]
+      - id: mypy
+        name: mypy (tipos)
+        entry: uv run mypy
+        language: system
+        types: [python]
+        pass_filenames: false          # o mypy analisa o projeto inteiro (precisa do contexto dos imports)
+      - id: secrets
+        name: detect-secrets (segredos)
+        entry: uv run detect-secrets-hook --baseline .secrets.baseline
+        language: system
+        types: [text]
+        exclude: ^(uv\.lock|schema\.yml|\.secrets\.baseline)$
+      - id: conventional-commit
+        name: mensagem de commit (Conventional Commits)
+        entry: uv run cz check --allow-abort --commit-msg-file
+        language: system
+        stages: [commit-msg]
+      - id: testes-rapidos
+        name: pytest (somente os de unidade)
+        entry: uv run pytest -q -m unidade -x -p no:randomly
+        language: system
+        pass_filenames: false
+        types: [python]
+        stages: [pre-push]               # roda no push, não a cada commit: o commit precisa ser rápido
